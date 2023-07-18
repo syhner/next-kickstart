@@ -1,27 +1,54 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
+    /* Type Checking */
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
+
+    /* Modules */
     "module": "esnext",
     "moduleResolution": "node",
+    "paths": {
+      "~/*": ["./src/*"]
+    },
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
+
+    /* Emit */
+    "noEmit": true,
+
+    /* JavaScript Support */
+    "allowJs": true,
+
+    /* Editor Support */
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "paths": {
-      "~/*": ["./src/*"]
-    }
+
+    /* Interop Constraints */
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+
+    /* Backwards Compatibility */
+
+    /* Language and Environment */
+    "jsx": "preserve",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "es5",
+
+    /* Compiler Diagnostics */
+
+    /* Projects */
+    "incremental": true,
+
+    /* Output Formatting */
+
+    /* Completeness */
+    "skipLibCheck": true
+
+    /* Command Line */
+
+    /* Watch Options */
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
