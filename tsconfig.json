@@ -35,7 +35,7 @@
     /* Language and Environment */
     "jsx": "preserve",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "target": "es5",
+    "target": "ES6",
 
     /* Compiler Diagnostics */
 
