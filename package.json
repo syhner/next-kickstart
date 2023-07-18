@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "----RUN": "",
     "build": "next build",
+    "dev": "next dev",
     "start": "next start",
+    "----LINT": "",
     "lint": "next lint",
     "typecheck": "tsc --noEmit"
   },
