@@ -1,6 +1,7 @@
 // @ts-check
 
-import './src/env.mjs';
+import withBundleAnalyzer from '@next/bundle-analyzer';
+import { env } from './src/env.mjs';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -12,4 +13,8 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+const withBundleAnalyzerConfig = withBundleAnalyzer({
+  enabled: env.ANALYZE === true,
+});
+
+export default withBundleAnalyzerConfig(nextConfig);
