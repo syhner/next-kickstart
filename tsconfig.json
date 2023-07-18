@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     /* Type Checking */
+    "noUncheckedIndexedAccess": true,
     "strict": true,
 
     /* Modules */
