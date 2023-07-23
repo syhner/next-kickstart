@@ -18,10 +18,10 @@ export const env = createEnv({
    */
   server: {
     ANALYZE: z.coerce.boolean().default(false),
-    AUTH_GITHUB_ID: z.string().min(1),
-    AUTH_GITHUB_SECRET: z.string().min(1),
-    DATABASE_URL: z.string().url(),
-    NEXTAUTH_SECRET: z.string().min(32),
+    // AUTH_GITHUB_ID: z.string().min(1),
+    // AUTH_GITHUB_SECRET: z.string().min(1),
+    // DATABASE_URL: z.string().url(),
+    // NEXTAUTH_SECRET: z.string().min(32),
   },
   /**
    * Due to how Next.js bundles environment variables on Edge and Client,
@@ -37,9 +37,9 @@ export const env = createEnv({
      * Server
      */
     ANALYZE: process.env.ANALYZE,
-    AUTH_GITHUB_ID: process.env.AUTH_GITHUB_ID,
-    AUTH_GITHUB_SECRET: process.env.AUTH_GITHUB_SECRET,
-    DATABASE_URL: process.env.DATABASE_URL,
-    NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
+    // AUTH_GITHUB_ID: process.env.AUTH_GITHUB_ID,
+    // AUTH_GITHUB_SECRET: process.env.AUTH_GITHUB_SECRET,
+    // DATABASE_URL: process.env.DATABASE_URL,
+    // NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
   },
 });
