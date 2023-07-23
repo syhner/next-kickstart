@@ -14,6 +14,7 @@
     "<THIRD_PARTY_MODULES>",
     "<BUILT_IN_MODULES>",
     "^@/",
+    "^~/",
     "^[.]"
   ],
   "printWidth": 80,

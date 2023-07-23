@@ -8,6 +8,8 @@
     "dev": "next dev",
     "start": "next start",
     "----LINT": "",
+    "format:check": "prettier --check .",
+    "format:fix": "prettier --write .",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "----DATABASE": "",
