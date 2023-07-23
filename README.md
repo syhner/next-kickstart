@@ -1,34 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Webstack
 
-## Getting Started
+Next.js 13.4 template repository, batteries included and edge-runtime ready
 
-First, run the development server:
+## Config
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+[**TypeScript**](https://www.typescriptlang.org/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [`src/types/reset.d.ts`](src/types/reset.d.ts) - using [ts-reset](https://github.com/total-typescript/ts-reset) to increase type-safety
+- [`tsconfig.json`](tsconfig.json)
+  - `"noUncheckedIndexedAccess": true` to increase type-safety
+  - `"target": "ES6"` (instead of `ES5`) for compatibility with [Drizzle Studio](https://orm.drizzle.team/drizzle-studio/overview)
+  - Import alias `~/*` (to differentiate from `@/*` imports)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+[**ESLint**](https://eslint.org/) - linter
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- [`.eslintrc.json`](.eslintrc.json)
 
-## Learn More
+[**Prettier**](https://prettier.io/) - code formatter
 
-To learn more about Next.js, take a look at the following resources:
+- [`.eslintrc.json`](.eslintrc.json)
+- [`.prettierignore`](.prettierignore)
+- [`.prettierrc.json`](.prettierrc.json)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[**Tailwind CSS**](https://tailwindcss.com/) - CSS utility framework
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- [`src/styles/globals.css`](src/styles/globals.css)
+- [`tailwind.config.js`](tailwind.config.js)
 
-## Deploy on Vercel
+[**t3-env**](https://github.com/t3-oss/t3-env) - type-safe environment variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [`src/env.mjs`](src/env.mjs) - configure environment variables
+- [`next.config.mjs`](next.config.mjs) - environment variables are validated at build-time
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[**NextAuth**](https://next-auth.js.org/) - authentication
+
+- [`src/app/api/auth/[...nextauth]/route.ts`](src/app/api/auth/[...nextauth]/route.ts)
+- [`src/components/auth.tsx`](src/components/auth.tsx)
+- [`src/lib/auth.ts`](src/lib/auth.ts)
+
+[**GitHub Actions**](https://github.com/features/actions) - CI/CD
+
+- [`.github/workflows/ci.yml`](.github/workflows/ci.yml) - type-checking and linting (hence these errors are ignored in [`next.config.mjs`](next.config.mjs))
+
+[**Drizzle**](https://orm.drizzle.team/) - SQL ORM
+
+- [`src/db/*`](src/db/)
+- [`src/lib/db.ts`](src/lib/db.ts)
+- [`drizzle.config.ts`](drizzle.config.ts)
+
+[**shadcn/ui**](https://ui.shadcn.com/) - UI component library
+
+- [`src/components/ui/*`](src/components/ui/)
+- [`src/components/theme-provider.tsx`](src/components/theme-provider.tsx)
+- [`src/components/theme-toggle.tsx`](src/components/theme-provider.tsx)
+- [`components.json`](components.json)
+
+[**VS Code**](https://code.visualstudio.com/)
+
+- [`.vscode/*`](.vscode/) - use project TypeScript version + debug configurations
