@@ -5,6 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@auth/core':
+    specifier: ^0.10.2
+    version: 0.10.2
+  '@auth/drizzle-adapter':
+    specifier: ^0.2.1
+    version: 0.2.1
   '@next/bundle-analyzer':
     specifier: ^13.4.10
     version: 13.4.10
@@ -143,6 +149,46 @@ packages:
       oauth4webapi: 2.3.0
       preact: 10.11.3
       preact-render-to-string: 5.2.3(preact@10.11.3)
+    dev: false
+
+  /@auth/core@0.10.1:
+    resolution: {integrity: sha512-zTE9cMRaAeTHvB78nRMovXW0D6ZnT3ldoGU+2PD5YAC+1G591LdOc4qjVaCyg5vmGjcTlHOpB4ApzyXXQkS1dA==}
+    peerDependencies:
+      nodemailer: ^6.8.0
+    peerDependenciesMeta:
+      nodemailer:
+        optional: true
+    dependencies:
+      '@panva/hkdf': 1.1.1
+      cookie: 0.5.0
+      jose: 4.14.4
+      oauth4webapi: 2.3.0
+      preact: 10.11.3
+      preact-render-to-string: 5.2.3(preact@10.11.3)
+    dev: false
+
+  /@auth/core@0.10.2:
+    resolution: {integrity: sha512-fe6nwrZTZFSoPf82gXxWQY9EkEv6rgsPjYs+WM1Gpgqfi+eNsXdYEJV57mnF30hIyWlPcxyC/KjGLcYw+G/KXw==}
+    peerDependencies:
+      nodemailer: ^6.8.0
+    peerDependenciesMeta:
+      nodemailer:
+        optional: true
+    dependencies:
+      '@panva/hkdf': 1.1.1
+      cookie: 0.5.0
+      jose: 4.14.4
+      oauth4webapi: 2.3.0
+      preact: 10.11.3
+      preact-render-to-string: 5.2.3(preact@10.11.3)
+    dev: false
+
+  /@auth/drizzle-adapter@0.2.1:
+    resolution: {integrity: sha512-RGIiFGTrmWYYNeGw2KUX1WyTtsUNjSevSTf2c+3bdoUT73sfvarHaxLZ3qdI/+UyEdQVMiNkescU8fLqqQCOVg==}
+    dependencies:
+      '@auth/core': 0.10.1
+    transitivePeerDependencies:
+      - nodemailer
     dev: false
 
   /@babel/code-frame@7.22.5:

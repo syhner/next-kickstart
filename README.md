@@ -37,6 +37,7 @@ Next.js 13.4 template repository, batteries included and edge-runtime ready
 - [`src/app/api/auth/[...nextauth]/route.ts`](src/app/api/auth/[...nextauth]/route.ts)
 - [`src/components/auth.tsx`](src/components/auth.tsx)
 - [`src/lib/auth.ts`](src/lib/auth.ts)
+- [`src/db/schemas/auth.ts`](src/db/schemas/auth.ts) — store auth data (users, accounts, sessions, verification tokens) in database
 
 [**GitHub Actions**](https://github.com/features/actions) - CI/CD
 
