@@ -1,7 +1,7 @@
 // @ts-check
 
 import withBundleAnalyzer from '@next/bundle-analyzer';
-import { env } from './src/env.mjs';
+import { env } from './env.mjs';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {

@@ -29,7 +29,7 @@ Next.js 13.4 template repository, batteries included and edge-runtime ready
 
 [**t3-env**](https://github.com/t3-oss/t3-env) - type-safe environment variables
 
-- [`src/env.mjs`](src/env.mjs) - configure environment variables
+- [`env.mjs`](env.mjs) - configure environment variables
 - [`next.config.mjs`](next.config.mjs) - environment variables are validated at build-time
 
 [**NextAuth**](https://next-auth.js.org/) - authentication

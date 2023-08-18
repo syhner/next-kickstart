@@ -1,7 +1,7 @@
 // import { DrizzleAdapter } from '@auth/drizzle-adapter';
 // import NextAuth from 'next-auth';
 // import GithubProvider from 'next-auth/providers/github';
-// import { env } from '~/env.mjs';
+// import { env } from '~/env';
 // import { db } from './db';
 
 // export const {
