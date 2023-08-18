@@ -6,7 +6,7 @@ Next.js 13.4 template repository, batteries included and edge-runtime ready
 
 [**TypeScript**](https://www.typescriptlang.org/)
 
-- [`src/types/reset.d.ts`](src/types/reset.d.ts) - using [ts-reset](https://github.com/total-typescript/ts-reset) to increase type-safety
+- [`reset.d.ts`](reset.d.ts) - using [ts-reset](https://github.com/total-typescript/ts-reset) to increase type-safety
 - [`tsconfig.json`](tsconfig.json)
   - `"noUncheckedIndexedAccess": true` to increase type-safety
   - `"target": "ES6"` (instead of `ES5`) for compatibility with [Drizzle Studio](https://orm.drizzle.team/drizzle-studio/overview)
