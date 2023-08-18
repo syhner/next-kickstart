@@ -35,9 +35,6 @@ dependencies:
   clsx:
     specifier: ^2.0.0
     version: 2.0.0
-  dotenv:
-    specifier: ^16.3.1
-    version: 16.3.1
   drizzle-orm:
     specifier: ^0.28.2
     version: 0.28.2(@planetscale/database@1.8.0)
@@ -135,8 +132,8 @@ packages:
       '@jridgewell/gen-mapping': 0.3.3
       '@jridgewell/trace-mapping': 0.3.18
 
-  /@auth/core@0.0.0-manual.8fcd46b0:
-    resolution: {integrity: sha512-KuhvZ0hHz6NvMAgAi+su0dJOD0YAiOWGaLswyfGK5RsG/cdhqyyiII9HOTaZbWZAKir0UGYb8SlN+owhV30JXg==}
+  /@auth/core@0.0.0-manual.59d8da33:
+    resolution: {integrity: sha512-ZTaUedTobGEvQPhEeJLmnsdGbztG10T0rK8TA4wH87Eb8oBHInI//3zRngX6T9hEcZ+/OJnIANw0JrGDqUDREA==}
     peerDependencies:
       nodemailer: ^6.8.0
     peerDependenciesMeta:
@@ -2160,11 +2157,6 @@ packages:
       esutils: 2.0.3
     dev: true
 
-  /dotenv@16.3.1:
-    resolution: {integrity: sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==}
-    engines: {node: '>=12'}
-    dev: false
-
   /dreamopt@0.8.0:
     resolution: {integrity: sha512-vyJTp8+mC+G+5dfgsY+r3ckxlz+QMX40VjPQsZc5gxVAxLmi64TBoVkP54A/pRAXMXsbu2GMMBrZPxNv23waMg==}
     engines: {node: '>=0.4.0'}
@@ -3572,7 +3564,7 @@ packages:
       nodemailer:
         optional: true
     dependencies:
-      '@auth/core': 0.0.0-manual.8fcd46b0
+      '@auth/core': 0.0.0-manual.59d8da33
       next: 13.4.10(@babel/core@7.22.9)(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
     dev: false
