@@ -14,6 +14,8 @@ Features which require configuration (using environment variables) can be enable
 - 🧩 [**shadcn/ui**](#shadcnui) - Beautifully designed components built with Radix UI and Tailwind CSS
 - 💽 [**Drizzle**](#drizzle) - ORM which feels like writing SQL (requires enabling)
 - 🔒 [**NextAuth**](#nextauth) - Flexible and secure authentication (requires enabling)
+- 🧪 [**Vitest**](#vitest) - Testing framework
+- 🐙 [**React Testing Library**](#react-testing-library) - Component testing
 - 🎭 [**Playwright**](#playwright) - End-to-end testing against multiple environments
 - 🔄 [**GitHub Actions**](#github-actions) - Robust CI/CD
 - 💻 [**VS Code configuration**](#vs-code) - Configurations for easy debugging
@@ -75,6 +77,14 @@ pnpm run dev
 - [`src/app/api/auth/[...nextauth]/route.ts`](src/app/api/auth/[...nextauth]/route.ts), [`src/components/auth.tsx`](src/components/auth.tsx)
 - [`src/db/schemas/auth.ts`](src/db/schemas/auth.ts) — store auth data (users, accounts, sessions, verification tokens) in database
 - [`src/lib/auth.ts`](src/lib/auth.ts)
+
+### [Vitest](https://vitest.dev/)
+
+- [`testing/setup.ts`](testing/setup.ts), [`types/vitest.d.ts`](types/vitest.d.ts), [`vitest.config.ts`](vitest.config.ts)
+
+### [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+
+- [`src/app/page.test.tsx`](src/app/page.test.tsx)
 
 ### [Playwright](https://playwright.dev/)
 
