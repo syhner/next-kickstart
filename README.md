@@ -1,10 +1,10 @@
 ## Webstack
 
-Next.js 13.4 template repository — edge-runtime ready and runs out of the box.
+Next.js 13.4 template repository — edge-runtime ready and runs out of the box
 
 ## 📚 Features
 
-Features which require configuration (using environment variables) can be enabled by uncommenting just a few lines in their [configuration](#⚙️-configuration).
+Features which require configuration (using environment variables) can be enabled by uncommenting just a few lines in their configuration
 
 - 🏗️ [**TypeScript**](#typescript) - Configured to maximize type safety
 - ⚙️ [**T3 Env**](#t3-env) - Environment variable validation
