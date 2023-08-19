@@ -22,12 +22,12 @@ export const env = createEnv({
    */
   server: {
     ANALYZE: z
-      .enum(['true', 'false'])
-      .transform((v) => v === 'true')
+      .enum(['true', 'false', '0', '1'])
+      .transform((v) => v === 'true' || v === '1')
       .default('false'),
     CI: z
-      .enum(['true', 'false'])
-      .transform((v) => v === 'true')
+      .enum(['true', 'false', '0', '1'])
+      .transform((v) => v === 'true' || v === '1')
       .default('false'),
     // AUTH_GITHUB_ID: z.string().min(1),
     // AUTH_GITHUB_SECRET: z.string().min(1),
