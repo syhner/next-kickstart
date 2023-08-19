@@ -11,11 +11,11 @@ Features which require configuration (using environment variables) can be enable
 - 📏 [**ESLint**](#eslint) - Consistent code standards
 - ✨ [**Prettier**](#prettier) - Consistent code styling
 - 🎨 [**Tailwind CSS**](#tailwind-css) - Utility-first CSS framework
-- 🧩 [**shadcn/ui**](#shadcnui) - Beautifully designed components built with Radix UI and Tailwind CSS
-- 💽 [**Drizzle**](#drizzle) - ORM which feels like writing SQL (requires enabling)
+- 🧩 [**shadcn/ui**](#shadcnui) - Components built with Radix UI and Tailwind CSS
+- 💽 [**Drizzle**](#drizzle) - ORM with maximal type safety (requires enabling)
 - 🔒 [**NextAuth**](#nextauth) - Flexible and secure authentication (requires enabling)
-- 🧪 [**Vitest**](#vitest) - Testing framework
-- 🐙 [**React Testing Library**](#react-testing-library) - Component testing
+- 🧪 [**Vitest**](#vitest) - Flexible testing framework
+- 🐙 [**React Testing Library**](#react-testing-library) - Maintainable component testing
 - 🎭 [**Playwright**](#playwright) - End-to-end testing against multiple environments
 - 🔄 [**GitHub Actions**](#github-actions) - Robust CI/CD
 - 💻 [**VS Code configuration**](#vs-code) - Configurations for easy debugging
