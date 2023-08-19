@@ -2,7 +2,11 @@
 // @ts-check
 
 import { createEnv } from '@t3-oss/env-nextjs';
+import * as dotenv from 'dotenv';
 import { z } from 'zod';
+
+// Load env vars for when outside of Next.js context
+dotenv.config({ path: '.env.local' });
 
 export const env = createEnv({
   skipValidation: process.env.CI === 'true',
