@@ -37,7 +37,7 @@ jobs:
         run: pnpm run lint
 
       - name: Run Playwright tests
-        run: pnpm exec playwright test
+        run: pnpm run test:e2e
 
       - name: Upload Playwright report
         uses: actions/upload-artifact@v3
