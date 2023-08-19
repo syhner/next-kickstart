@@ -21,8 +21,14 @@ export const env = createEnv({
    * Will throw if you access these variables on the client.
    */
   server: {
-    ANALYZE: z.coerce.boolean().default(false),
-    CI: z.coerce.boolean().default(false),
+    ANALYZE: z
+      .enum(['true', 'false'])
+      .transform((v) => v === 'true')
+      .default('false'),
+    CI: z
+      .enum(['true', 'false'])
+      .transform((v) => v === 'true')
+      .default('false'),
     // AUTH_GITHUB_ID: z.string().min(1),
     // AUTH_GITHUB_SECRET: z.string().min(1),
     // DATABASE_URL: z.string().url(),
