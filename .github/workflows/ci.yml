@@ -3,11 +3,12 @@ name: CI
 on: [push, pull_request]
 
 jobs:
-  build:
+  ci:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
         node-version: [18]
+    timeout-minutes: 20
     steps:
       - name: Checkout source code
         uses: actions/checkout@v3
@@ -26,8 +27,22 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Install Playwright browsers
+        run: pnpm exec playwright install --with-deps
+
       - name: Typecheck
         run: pnpm run typecheck
 
       - name: Lint
         run: pnpm run lint
+
+      - name: Run Playwright tests
+        run: pnpm exec playwright test
+
+      - name: Upload Playwright report
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30

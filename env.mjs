@@ -19,6 +19,7 @@ export const env = createEnv({
   server: {
     ANALYZE: z.coerce.boolean().default(false),
     CI: z.coerce.boolean().default(false),
+    PORT: z.coerce.number().default(3000),
     // AUTH_GITHUB_ID: z.string().min(1),
     // AUTH_GITHUB_SECRET: z.string().min(1),
     // DATABASE_URL: z.string().url(),
@@ -39,6 +40,7 @@ export const env = createEnv({
      */
     ANALYZE: process.env.ANALYZE,
     CI: process.env.CI,
+    PORT: process.env.PORT,
     // AUTH_GITHUB_ID: process.env.AUTH_GITHUB_ID,
     // AUTH_GITHUB_SECRET: process.env.AUTH_GITHUB_SECRET,
     // DATABASE_URL: process.env.DATABASE_URL,
