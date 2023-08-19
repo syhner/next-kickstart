@@ -1,8 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 import { env } from './env.mjs';
 
-const baseURL = `http://localhost:${env.PORT}`;
-console.log(baseURL);
+const baseURL = 'http://localhost:3000';
 
 export default defineConfig({
   globalTimeout: env.CI ? 1000 * 60 * 10 : undefined,
