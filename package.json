@@ -12,6 +12,7 @@
     "format:check": "prettier --check .",
     "format:fix": "prettier --write .",
     "lint": "next lint",
+    "lint:fix": "next lint --fix",
     "typecheck": "tsc --noEmit",
     "----TEST": "",
     "test": "vitest",
