@@ -1,4 +1,4 @@
-## Webstack
+## next-kickstart
 
 Next.js 13.4 template repository — edge-runtime ready and runs out of the box
 
@@ -24,11 +24,11 @@ Features which require configuration (using environment variables) can be enable
 
 🚀 **Option 1: Clone and deploy with Vercel**
 
-[![Vercel](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2FSyhner%2Fwebstack)
+[![Vercel](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2FSyhner%2Fnext-kickstart)
 
 📋 **Option 2: Clone and run locally**
 
-1. [Use this template](https://github.com/new?template_name=webstack&template_owner=Syhner)
+1. [Use this template](https://github.com/new?template_name=next-kickstart&template_owner=Syhner)
 2. Clone your new repository
 3. Install dependencies and run the development server
 

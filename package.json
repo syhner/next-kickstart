@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package",
-  "name": "webstack",
-  "version": "0.1.0",
+  "name": "next-kickstart",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "----RUN": "",
