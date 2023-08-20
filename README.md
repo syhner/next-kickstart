@@ -1,6 +1,6 @@
 ## next-kickstart
 
-Next.js 13.4 template repository — edge-runtime ready and runs out of the box
+Feature packaed Next.js 13.4 (app router) boilerplate — edge-runtime ready and runs out of the box
 
 ## 📚 Features
 
