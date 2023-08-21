@@ -39,3 +39,9 @@ next-env.d.ts
 
 # misc
 private/
+
+# PWA
+public/sw.js
+public/sw.js.map
+workbox-*.js
+workbox-*.js.map

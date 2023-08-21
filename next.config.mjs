@@ -1,6 +1,5 @@
 // @ts-check
 
-import withBundleAnalyzer from '@next/bundle-analyzer';
 import { env } from './env.mjs';
 
 /** @type {import('next').NextConfig} */
@@ -15,8 +14,22 @@ const nextConfig = {
   },
 };
 
-const withBundleAnalyzerConfig = withBundleAnalyzer({
-  enabled: env.ANALYZE === true,
-});
+/**
+ * @param {string} phase
+ * @param {{ defaultConfig: import('next').NextConfig }} options
+ */
+const nextConfigWithPlugins = async (phase, { defaultConfig }) => {
+  /* Dynamically import plugins from devDependencies to reduce bundle size */
 
-export default withBundleAnalyzerConfig(nextConfig);
+  const withBundleAnalyzer = (await import('@next/bundle-analyzer')).default({
+    enabled: env.ANALYZE,
+  });
+
+  const withPWA = (await import('@ducanh2912/next-pwa')).default({
+    dest: 'public',
+  });
+
+  return withBundleAnalyzer(withPWA(nextConfig));
+};
+
+export default nextConfigWithPlugins;

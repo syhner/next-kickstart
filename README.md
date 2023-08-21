@@ -1,6 +1,6 @@
 ## next-kickstart
 
-Feature packaed Next.js 13.4 (app router) boilerplate — edge-runtime ready and runs out of the box
+Minimal yet feature packed Next.js 13.4 (app router) boilerplate. Zero config to run on edge.
 
 ## 📚 Features
 
@@ -14,6 +14,7 @@ Features which require configuration (using environment variables) can be enable
 - 🧩 [**shadcn/ui**](#shadcnui) - Components built with Radix UI and Tailwind CSS
 - 💽 [**Drizzle**](#drizzle) - ORM with maximal type safety (requires enabling)
 - 🔒 [**NextAuth**](#nextauth) - Flexible and secure authentication (requires enabling)
+- 📦 [**next-pwa**](#next-pwa) - Installable as a progressive web app (PWA)
 - 🧪 [**Vitest**](#vitest) - Flexible testing framework
 - 🐙 [**React Testing Library**](#react-testing-library) - Maintainable component testing
 - 🎭 [**Playwright**](#playwright) - End-to-end testing against multiple environments
@@ -77,6 +78,10 @@ pnpm run dev
 - [`src/app/api/auth/[...nextauth]/route.ts`](src/app/api/auth/[...nextauth]/route.ts), [`src/components/auth.tsx`](src/components/auth.tsx)
 - [`src/db/schemas/auth.ts`](src/db/schemas/auth.ts) — store auth data (users, accounts, sessions, verification tokens) in database
 - [`src/lib/auth.ts`](src/lib/auth.ts)
+
+### [next-pwa](https://www.npmjs.com/package/@ducanh2912/next-pwa)
+
+- [`public/icon-512x512.png`](public/icon-512x512.png), [`public/manifest.json`](public/manifest.json), [`next.config.mjs`](next.config.mjs)
 
 ### [Vitest](https://vitest.dev/)
 
