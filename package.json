@@ -6,24 +6,23 @@
   "scripts": {
     "----RUN": "",
     "build": "next build",
+    "build:analyze": "ANALYZE=true next build",
     "dev": "next dev",
     "start": "next start",
-    "----LINT": "",
+    "----CHECK": "",
     "format:check": "prettier --check .",
     "format:fix": "prettier --write .",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "typecheck": "tsc --noEmit",
     "----TEST": "",
-    "test": "vitest",
+    "test:unit": "vitest",
     "test:e2e": "playwright test",
     "----DATABASE": "",
     "db:drop": "drizzle-kit drop",
     "db:generate": "drizzle-kit generate:mysql",
     "db:push": "drizzle-kit push:mysql",
-    "db:view": "drizzle-kit studio",
-    "----DEBUG": "",
-    "build:analyze": "ANALYZE=true next build"
+    "db:view": "drizzle-kit studio"
   },
   "dependencies": {
     "@auth/core": "^0.10.2",

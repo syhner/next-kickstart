@@ -37,7 +37,7 @@ jobs:
         run: pnpm run lint
 
       - name: Run unit / component tests
-        run: pnpm run test
+        run: pnpm run test:unit
 
       - name: Run Playwright tests
         run: pnpm run test:e2e
