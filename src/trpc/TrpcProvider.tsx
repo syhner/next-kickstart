@@ -3,9 +3,9 @@
 import React, { useState } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { httpBatchLink } from '@trpc/client';
-import superjson from 'superjson';
 import getBaseUrl from '~/util/getBaseUrl';
-import { trpc } from './client';
+import { transformer } from './transformer';
+import { trpc } from './trpc-react';
 
 export default function TrpcProvider({
   children,
@@ -20,7 +20,7 @@ export default function TrpcProvider({
           url: `${getBaseUrl()}/api/trpc`,
         }),
       ],
-      transformer: superjson,
+      transformer,
     })
   );
 
