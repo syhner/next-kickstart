@@ -10,6 +10,7 @@ Minimal yet feature packed Next.js 13.4 (app router) boilerplate. Zero config to
 - ✨ [**Prettier**](#prettier) - Consistent code styling
 - 🎨 [**Tailwind CSS**](#tailwind-css) - Utility-first CSS framework
 - 🧩 [**shadcn/ui**](#shadcnui) - Components built with Radix UI and Tailwind CSS
+- 🌐 [**tRPC**](#trpc) - Create end-to-end type-safe APIs that run on both client and server
 - 💽 [**Drizzle**](#drizzle) - ORM with maximal type safety (requires enabling)
 - 🔒 [**NextAuth**](#nextauth) - Flexible and secure authentication (requires enabling)
 - 📦 [**next-pwa**](#next-pwa) - Installable as a progressive web app (PWA)
@@ -76,6 +77,10 @@ Features which require configuration (i.e. they need environment variables that 
 ### [shadcn/ui](https://ui.shadcn.com/)
 
 - [`src/components/ui/`](src/components/ui/), [`src/components/theme-provider.tsx`](src/components/theme-provider.tsx), [`src/components/theme-toggle.tsx`](src/components/theme-provider.tsx), [`components.json`](components.json)
+
+### [tRPC](https://trpc.io/)
+
+- [`src/app/api/trpc/[trpc]/route.ts`](src/app/api/trpc/[trpc]/route.ts), [`src/trpc/`](src/trpc)
 
 ### [Drizzle](https://orm.drizzle.team/)
 
