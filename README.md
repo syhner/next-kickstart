@@ -10,7 +10,7 @@ Minimal yet feature packed Next.js 13.4 (app router) boilerplate. Zero config to
 - ✨ [**Prettier**](#prettier) - Consistent code styling
 - 🎨 [**Tailwind CSS**](#tailwind-css) - Utility-first CSS framework
 - 🧩 [**shadcn/ui**](#shadcnui) - Components built with Radix UI and Tailwind CSS
-- 🌐 [**tRPC**](#trpc) - Create end-to-end type-safe APIs that run on both client and server
+- 🌐 [**tRPC**](#trpc) - Create end-to-end type-safe APIs that work in both client and server components
 - 💽 [**Drizzle**](#drizzle) - ORM with maximal type safety (requires enabling)
 - 🔒 [**NextAuth**](#nextauth) - Flexible and secure authentication (requires enabling)
 - 📦 [**next-pwa**](#next-pwa) - Installable as a progressive web app (PWA)
