@@ -27,6 +27,7 @@ const nextConfigWithPlugins = async (phase, { defaultConfig }) => {
 
   const withPWA = (await import('@ducanh2912/next-pwa')).default({
     dest: 'public',
+    disable: !env.PWA,
   });
 
   return withBundleAnalyzer(withPWA(nextConfig));
