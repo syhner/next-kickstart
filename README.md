@@ -4,8 +4,6 @@ Minimal yet feature packed Next.js 13.4 (app router) boilerplate. Zero config to
 
 ## 📚 Features
 
-Features which require configuration (using environment variables) can be enabled by uncommenting just a few lines in their configuration
-
 - 🏗️ [**TypeScript**](#typescript) - Configured to maximize type safety
 - ⚙️ [**T3 Env**](#t3-env) - Environment variable validation
 - 📏 [**ESLint**](#eslint) - Consistent code standards
@@ -40,6 +38,16 @@ pnpm run dev
 
 ## ⚙️ Configuration
 
+Features which require configuration (i.e. they need environment variables that can't be defaulted) can be enabled by uncommenting all lines under where `@enable {feature}` appears. Some of these may be optional, indicated with `@optional {purpose}` e.g.
+
+```ts
+/**
+ * @enable Drizzle
+ * @optional Store auth data in database
+ */
+// adapter: DrizzleAdapter(db)
+```
+
 ### [TypeScript](https://www.typescriptlang.org/)
 
 - [`tsconfig.json`](tsconfig.json)
@@ -71,9 +79,13 @@ pnpm run dev
 
 ### [Drizzle](https://orm.drizzle.team/)
 
+(requires enabling)
+
 - [`src/db/`](src/db/), [`src/lib/db.ts`](src/lib/db.ts), [`drizzle.config.ts`](drizzle.config.ts)
 
 ### [NextAuth](https://next-auth.js.org/)
+
+(requires enabling)
 
 - [`src/app/api/auth/[...nextauth]/route.ts`](src/app/api/auth/[...nextauth]/route.ts), [`src/components/auth.tsx`](src/components/auth.tsx)
 - [`src/db/schemas/auth.ts`](src/db/schemas/auth.ts) — store auth data (users, accounts, sessions, verification tokens) in database
