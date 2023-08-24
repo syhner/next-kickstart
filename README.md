@@ -23,6 +23,7 @@ Features which require enabling can be done so by uncommenting all lines under w
 - 🌐 [**tRPC**](#trpc) - Create end-to-end type-safe APIs that work in both client and server components
 - 💽 [**Drizzle**](#drizzle) - ORM with maximal type safety (requires enabling)
 - 🔒 [**NextAuth**](#nextauth) - Flexible and secure authentication (requires enabling)
+  - ❗️ using [next-auth@experimental](https://www.npmjs.com/package/next-auth/v/0.0.0-manual.ffd05533) to work on edge
 - 📦 [**next-pwa**](#next-pwa) - Installable as a progressive web app (PWA)
 - 🧪 [**Vitest**](#vitest) - Flexible testing framework
 - 🐙 [**React Testing Library**](#react-testing-library) - Maintainable component testing
