@@ -51,10 +51,7 @@ pnpm run dev
 
 ### [TypeScript](https://www.typescriptlang.org/)
 
-- [`tsconfig.json`](tsconfig.json)
-  - `"noUncheckedIndexedAccess": true` to increase type-safety
-  - `"target": "ES6"` (instead of `ES5`) for compatibility with [Drizzle Studio](https://orm.drizzle.team/drizzle-studio/overview)
-  - Absolute imports with `~/*` (to differentiate from `@/*` namespace imports)
+- [`tsconfig.json`](tsconfig.json) - all modifications from [create-next-app](https://www.npmjs.com/package/create-next-app) are explained with comments
 - [`types/reset.d.ts`](types/reset.d.ts) - using [ts-reset](https://github.com/total-typescript/ts-reset) to increase type-safety
 
 ### [T3 Env](https://github.com/t3-oss/t3-env)

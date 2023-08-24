@@ -2,14 +2,14 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     /* Type Checking */
-    "noUncheckedIndexedAccess": true,
+    "noUncheckedIndexedAccess": true, // Increases type-safety
     "strict": true,
 
     /* Modules */
     "module": "esnext",
     "moduleResolution": "node",
     "paths": {
-      "~/*": ["./src/*"]
+      "~/*": ["./src/*"] // Alias for absolute imports
     },
     "resolveJsonModule": true,
 
@@ -36,7 +36,7 @@
     /* Language and Environment */
     "jsx": "preserve",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "target": "ES2017",
+    "target": "ES2017", // Drizzle Studio requires >=ES2015, src/trpc/trpc-caller requires >=ES2017
 
     /* Compiler Diagnostics */
 
