@@ -1,6 +1,6 @@
 ## next-kickstart
 
-Minimal yet feature packed Next.js 13.4 (app router) boilerplate. Zero config to run on edge.
+Minimal yet feature packed Next.js 13.4 (app router) boilerplate. Zero setup to run on edge.
 
 Features which require enabling can be done so by uncommenting all lines under where `@enable {feature}` appears. Some of these may be optional, indicated with `@optional {purpose}` e.g.
 
