@@ -2,6 +2,16 @@
 
 Minimal yet feature packed Next.js 13.4 (app router) boilerplate. Zero config to run on edge.
 
+Features which require enabling can be done so by uncommenting all lines under where `@enable {feature}` appears. Some of these may be optional, indicated with `@optional {purpose}` e.g.
+
+```ts
+/**
+ * @enable Drizzle
+ * @optional Store auth data in database
+ */
+// adapter: DrizzleAdapter(db)
+```
+
 ## 📚 Features
 
 - 🏗️ [**TypeScript**](#typescript) - Configured to maximize type safety
@@ -38,16 +48,6 @@ pnpm run dev
 ```
 
 ## ⚙️ Configuration
-
-Features which require configuration (i.e. they need environment variables that can't be defaulted) can be enabled by uncommenting all lines under where `@enable {feature}` appears. Some of these may be optional, indicated with `@optional {purpose}` e.g.
-
-```ts
-/**
- * @enable Drizzle
- * @optional Store auth data in database
- */
-// adapter: DrizzleAdapter(db)
-```
 
 ### [TypeScript](https://www.typescriptlang.org/)
 
