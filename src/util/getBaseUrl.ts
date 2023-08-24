@@ -5,9 +5,10 @@ export default function getBaseUrl() {
     // Browser should use relative path
     return '';
 
-  if (process.env.VERCEL_URL)
-    // Reference for vercel.com
+  // Deployment URL when deployed on Vercel
+  if (process.env.VERCEL_URL) {
     return `https://${process.env.VERCEL_URL}`;
+  }
 
   // Assume localhost
   return 'http://localhost:3000';
