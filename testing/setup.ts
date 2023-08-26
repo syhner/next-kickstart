@@ -4,7 +4,7 @@ import { afterEach, expect } from 'vitest';
 
 expect.extend(matchers);
 
-// hooks are reset before each suite
+// Hooks are reset before each suite
 afterEach(() => {
   cleanup();
 });
