@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { httpBatchLink } from '@trpc/client';
 import { transformer } from '~/trpc/transformer';
 import { trpcReact } from '~/trpc/trpc-react';
-import getBaseUrl from '~/util/getBaseUrl';
+import { getBaseUrl } from '~/util/getBaseUrl';
 
 export function TrpcProvider({ children }: { children: React.ReactNode }) {
   const [queryClient] = useState(() => new QueryClient({}));
