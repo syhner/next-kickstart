@@ -1,7 +1,7 @@
 import { ServerRuntime } from 'next';
 import { fetchRequestHandler } from '@trpc/server/adapters/fetch';
-import { createContext } from '~/trpc/context';
-import { appRouter } from '~/trpc/routers';
+import { createContext } from '~/trpc/init';
+import { appRouter } from '~/trpc/router';
 
 export const runtime: ServerRuntime = 'edge';
 

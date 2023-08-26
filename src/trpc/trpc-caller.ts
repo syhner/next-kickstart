@@ -1,6 +1,6 @@
 import 'server-only';
 
-import { createContext } from './context';
-import { appRouter } from './routers';
+import { createContext } from './init';
+import { appRouter } from './router';
 
 export const trpcCaller = appRouter.createCaller(await createContext());
