@@ -43,7 +43,12 @@ export const env = createEnv({
      */
     // NEXTAUTH_SECRET: z.string().min(32),
 
-    PWA: toggle.default('true'),
+    /**
+     * Set PWA environment variable to true to enable PWA
+     * (in env.local and/or deployment environment variables)
+     * @enable PWA
+     */
+    PWA: toggle.default('false'),
   },
   /**
    * Due to how Next.js bundles environment variables on Edge and Client,
