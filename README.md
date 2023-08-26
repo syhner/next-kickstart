@@ -59,6 +59,7 @@ pnpm run dev
 
 - [`env.mjs`](env.mjs) - configure environment variables
 - [`next.config.mjs`](next.config.mjs) - environment variables are validated at build-time
+- [`src/env.ts`](src/env.ts) - re-export validated environment variables to be imported easily `from '~/env'`
 
 ### [ESLint](https://eslint.org/)
 
@@ -66,41 +67,58 @@ pnpm run dev
 
 ### [Prettier](https://prettier.io/)
 
-- [`.eslintrc.json`](.eslintrc.json), [`.prettierignore`](.prettierignore), [`.prettierrc.json`](.prettierrc.json)
+- [`.eslintrc.json`](.eslintrc.json)
+- [`.prettierignore`](.prettierignore)
+- [`.prettierrc.json`](.prettierrc.json)
 
 ### [Tailwind CSS](https://tailwindcss.com/)
 
-- [`src/styles/globals.css`](src/styles/globals.css), [`tailwind.config.js`](tailwind.config.js)
+- [`src/styles/globals.css`](src/styles/globals.css)
+- [`tailwind.config.js`](tailwind.config.js)
 
 ### [shadcn/ui](https://ui.shadcn.com/)
 
-- [`src/components/ui/`](src/components/ui/), [`src/components/theme-provider.tsx`](src/components/theme-provider.tsx), [`src/components/theme-toggle.tsx`](src/components/theme-provider.tsx), [`components.json`](components.json)
+- [`src/components/providers/theme-provider.tsx`](src/components/providers/theme-provider.tsx)
+- [`src/components/ui/`](src/components/ui/)
+- [`src/components/theme-toggle.tsx`](src/components/theme-toggle.tsx)
+- [`components.json`](components.json)
 
 ### [tRPC](https://trpc.io/)
 
-- [`src/app/api/trpc/[trpc]/route.ts`](src/app/api/trpc/[trpc]/route.ts), [`src/trpc/`](src/trpc)
+- [`src/app/api/trpc/[trpc]/route.ts`](src/components/providers/trpc-provider.tsx)
+- [`src/components/providers/trpc-provider.tsx`](src/app/api/trpc/[trpc]/route.ts)
+- [`src/trpc/`](src/trpc)
+  - [`trpc-caller.ts`](src/trpc/trpc-caller.ts) - trpc caller to be used in server components
+  - [`trpc-react.ts`](src/trpc/trpc-reacer.ts) - trpc to be used in client components
 
 ### [Drizzle](https://orm.drizzle.team/)
 
 (requires enabling)
 
-- [`src/db/`](src/db/), [`src/lib/db.ts`](src/lib/db.ts), [`drizzle.config.ts`](drizzle.config.ts)
+- [`src/db/`](src/db/)
+- [`src/lib/db.ts`](src/lib/db.ts)
+- [`drizzle.config.ts`](drizzle.config.ts)
 
 ### [NextAuth](https://next-auth.js.org/)
 
 (requires enabling)
 
-- [`src/app/api/auth/[...nextauth]/route.ts`](src/app/api/auth/[...nextauth]/route.ts), [`src/components/auth.tsx`](src/components/auth.tsx)
+- [`src/app/api/auth/[...nextauth]/route.ts`](src/app/api/auth/[...nextauth]/route.ts)
+- [`src/components/auth.tsx`](src/components/auth.tsx)
 - [`src/db/schemas/auth.ts`](src/db/schemas/auth.ts) — store auth data (users, accounts, sessions, verification tokens) in database
 - [`src/lib/auth.ts`](src/lib/auth.ts)
 
 ### [next-pwa](https://www.npmjs.com/package/@ducanh2912/next-pwa)
 
-- [`public/icon-512x512.png`](public/icon-512x512.png), [`public/manifest.json`](public/manifest.json), [`next.config.mjs`](next.config.mjs)
+- [`public/icon-512x512.png`](public/icon-512x512.png)
+- [`public/manifest.json`](public/manifest.json)
+- [`next.config.mjs`](next.config.mjs)
 
 ### [Vitest](https://vitest.dev/)
 
-- [`testing/setup.ts`](testing/setup.ts), [`types/vitest.d.ts`](types/vitest.d.ts), [`vitest.config.ts`](vitest.config.ts)
+- [`testing/setup.ts`](testing/setup.ts)
+- [`types/vitest.d.ts`](types/vitest.d.ts)
+- [`vitest.config.ts`](vitest.config.ts)
 
 ### [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 
@@ -108,7 +126,8 @@ pnpm run dev
 
 ### [Playwright](https://playwright.dev/)
 
-- [`e2e/`](e2e/), [`playwright.config.ts`](playwright.config.ts)
+- [`e2e/`](e2e/)
+- [`playwright.config.ts`](playwright.config.ts)
 
 ### [GitHub Actions](https://github.com/features/actions)
 
