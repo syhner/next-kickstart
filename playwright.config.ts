@@ -1,15 +1,26 @@
+/* eslint-disable no-process-env */
+
 import { defineConfig, devices } from '@playwright/test';
-import { env } from './env.mjs';
+import * as dotenv from 'dotenv';
+import { z } from 'zod';
+
+dotenv.config({ path: '.env.local' });
+
+const CI = z
+  .enum(['true', 'false', '0', '1'])
+  .transform((v) => v === 'true' || v === '1')
+  .default('false')
+  .parse(process.env.CI);
 
 const baseURL = 'http://localhost:3000';
 
 export default defineConfig({
-  globalTimeout: env.CI ? 1000 * 60 * 10 : undefined,
+  globalTimeout: CI ? 1000 * 60 * 10 : undefined,
   testDir: './e2e',
   fullyParallel: true,
-  forbidOnly: !!env.CI,
-  retries: env.CI ? 2 : 0,
-  workers: env.CI ? 1 : undefined,
+  forbidOnly: !!CI,
+  retries: CI ? 2 : 0,
+  workers: CI ? 1 : undefined,
   reporter: 'html',
   use: {
     baseURL,
@@ -53,6 +64,6 @@ export default defineConfig({
     command: 'pnpm run dev',
     url: baseURL,
     timeout: 1000 * 60 * 5,
-    reuseExistingServer: !env.CI,
+    reuseExistingServer: !CI,
   },
 });

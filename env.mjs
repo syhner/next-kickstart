@@ -2,11 +2,7 @@
 // @ts-check
 
 import { createEnv } from '@t3-oss/env-nextjs';
-import * as dotenv from 'dotenv';
 import { z } from 'zod';
-
-// Load env vars for when outside of Next.js context
-dotenv.config({ path: '.env.local' });
 
 const toggle = z
   .enum(['true', 'false', '0', '1'])
@@ -26,7 +22,6 @@ export const env = createEnv({
    */
   server: {
     ANALYZE: toggle.default('false'),
-    CI: toggle.default('false'),
     /**
      * @enable NextAuth
      */
@@ -64,7 +59,6 @@ export const env = createEnv({
      * Server
      */
     ANALYZE: process.env.ANALYZE,
-    CI: process.env.CI,
     /**
      * @enable NextAuth
      */
