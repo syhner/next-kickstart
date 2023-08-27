@@ -21,11 +21,13 @@ Features which require enabling can be done so by uncommenting all lines under w
 - 🎨 [**Tailwind CSS**](#tailwind-css) - Utility-first CSS framework
 - 🧩 [**shadcn/ui**](#shadcnui) - Components built with Radix UI and Tailwind CSS
 - 🌐 [**tRPC**](#trpc) - Create end-to-end type-safe APIs that work in both client and server components
+- ⚡ [**WebSockets**](#websockets) - Real-time communication (using Pusher) (requires enabling)
+  - ❗️ using [pusher-http-edge](https://www.npmjs.com/package/pusher-http-edge) to run on edge, use the [nodejs runtime](src/app/api/trpc/[trpc]/route.ts) with a [stable version](https://www.npmjs.com/package/pusher) if desired
+  - integrates with tRPC for end-to-end type-safe events
 - 💽 [**Drizzle**](#drizzle) - ORM with maximal type safety (requires enabling)
 - 🔒 [**NextAuth**](#nextauth) - Flexible and secure authentication (requires enabling)
   - ❗️ using [next-auth@experimental](https://www.npmjs.com/package/next-auth/v/0.0.0-manual.ffd05533) to run on edge. use the [nodejs runtime](src/app/api/auth/[...nextauth]/route.ts) with a [stable version](https://www.npmjs.com/package/next-auth) if desired
-- ⚡ [**WebSockets**](#websockets) - Real-time communication using Pusher (can be swapped out with another service)
-  - ❗️ using [pusher-http-edge](https://www.npmjs.com/package/pusher-http-edge) to run on edge, use the [nodejs runtime](src/app/api/trpc/[trpc]/route.ts) with a [stable version](https://www.npmjs.com/package/pusher) if desired
+  - optionally store auth data with Drizzle
 - 📦 [**next-pwa**](#next-pwa) - Installable as a progressive web app (PWA) (requires enabling)
 - 🧪 [**Vitest**](#vitest) - Flexible testing framework
 - 🐙 [**React Testing Library**](#react-testing-library) - Maintainable component testing
@@ -97,6 +99,17 @@ pnpm run dev
 - [`src/app/examples/client-component/page.tsx`](src/app/examples/client-component/page.tsx) - use in a client component
 - [`src/app/examples/server-component/page.tsx`](src/app/examples/server-component/page.tsx) - use in a server component
 
+### [WebSockets](https://pusher.com)
+
+- [`src/hooks/useEvent.ts`](src/hooks/useEvent.ts)
+- [`src/lib/event-server.ts`](src/lib/event-server.ts)
+- [`src/lib/events.ts`](src/lib/events.ts)
+- [`src/trpc/methods.ts`](src/trpc/methods.ts)
+
+#### Examples
+
+- [`src/app/examples/websockets/page.tsx`](src/app/examples/websockets/page.tsx)
+
 ### [Drizzle](https://orm.drizzle.team/)
 
 (requires enabling)
@@ -113,17 +126,6 @@ pnpm run dev
 - [`src/components/auth.tsx`](src/components/auth.tsx)
 - [`src/db/schemas/auth.ts`](src/db/schemas/auth.ts) — store auth data (users, accounts, sessions, verification tokens) in database
 - [`src/lib/auth.ts`](src/lib/auth.ts)
-
-### [WebSockets](https://pusher.com)
-
-- [`src/hooks/useEvent.ts`](src/hooks/useEvent.ts)
-- [`src/lib/event-server.ts`](src/lib/event-server.ts)
-- [`src/lib/events.ts`](src/lib/events.ts)
-- [`src/trpc/methods.ts`](src/trpc/methods.ts)
-
-#### Examples
-
-- [`src/app/examples/websockets/page.tsx`](src/app/examples/websockets/page.tsx)
 
 ### [next-pwa](https://www.npmjs.com/package/@ducanh2912/next-pwa)
 
@@ -152,5 +154,6 @@ pnpm run dev
 
 ### [VS Code](https://code.visualstudio.com/)
 
+- [`.vscode/extensions.json`](.vscode/extensions.json) - recommended workspace extensions
 - [`.vscode/launch.json`](.vscode/launch.json) - debug configurations
 - [`.vscode/settings.json`](.vscode/settings.json) - use project TypeScript version
