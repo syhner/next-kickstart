@@ -1,6 +1,6 @@
 import '../styles/globals.css';
 
-import type { Metadata } from 'next';
+import type { Metadata, ServerRuntime } from 'next';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from '~/components/providers/theme-provider';
 import { TrpcProvider } from '~/components/providers/trpc-provider';
@@ -14,6 +14,8 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
   themeColor: '#000000',
 };
+
+export const runtime: ServerRuntime = 'edge';
 
 export default function RootLayout({
   children,

@@ -1,7 +1,4 @@
-import { ServerRuntime } from 'next';
 import Image from 'next/image';
-
-export const runtime: ServerRuntime = 'edge';
 
 export default function Home() {
   return (

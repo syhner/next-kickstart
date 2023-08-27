@@ -2,7 +2,7 @@
 
 Zero setup, edge-ready, feature-packed Next.js 13.4 (app router) boilerplate.
 
-Some features depend on environment variables and so require enabling (indicated below with 💡). They are disabled by default so that the app runs without any setup. They can be enabled by uncommenting all lines under where `@enable {feature}` appears. Some of these may be optional, indicated with `@optional {purpose}` e.g.
+Some features depend on environment variables (indicated in features list with 💡) and so require enabling. They are disabled by default so that the app runs without any setup. They can be enabled by uncommenting all lines under where `@enable {feature}` appears. Some of these may be optional, indicated with `@optional {purpose}` e.g.
 
 ```ts
 /**
@@ -10,6 +10,12 @@ Some features depend on environment variables and so require enabling (indicated
  * @optional Store auth data in database
  */
 // adapter: DrizzleAdapter(db)
+```
+
+Some features are using experimental versions (indicated in features list with ❗️) and so are not production ready. They can be swapped out with stable versions that are referenced alongside, which will require using the nodejs runtime instead of the edge runtime (which is set in the [root layout](src/app/layout.tsx) in this repo).
+
+```ts
+export const runtime: ServerRuntime = 'nodejs';
 ```
 
 ## 📚 Features
