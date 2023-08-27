@@ -105,7 +105,6 @@ pnpm run dev
 💡 (requires enabling)
 
 - [`src/hooks/useEvent.ts`](src/hooks/useEvent.ts)
-- [`src/lib/event-server.ts`](src/lib/event-server.ts)
 - [`src/lib/events.ts`](src/lib/events.ts)
 - [`src/trpc/methods.ts`](src/trpc/methods.ts)
 
