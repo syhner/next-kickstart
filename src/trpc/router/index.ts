@@ -9,6 +9,7 @@ import {
 
 export const appRouter = router({
   health: publicProcedure.query(() => 'ok'),
+
   message: triggerEvent({
     procedure: publicProcedure,
     channel: 'websockets',
