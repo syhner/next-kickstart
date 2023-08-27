@@ -92,6 +92,11 @@ pnpm run dev
   - [`trpc-caller.ts`](src/trpc/trpc-caller.ts) - trpc caller to be used in server components
   - [`trpc-react.ts`](src/trpc/trpc-reacer.ts) - trpc to be used in client components
 
+#### Examples
+
+- [`src/app/examples/client-component/page.tsx`](src/app/examples/client-component/page.tsx) - use in a client component
+- [`src/app/examples/server-component/page.tsx`](src/app/examples/server-component/page.tsx) - use in a server component
+
 ### [Drizzle](https://orm.drizzle.team/)
 
 (requires enabling)
@@ -115,6 +120,10 @@ pnpm run dev
 - [`src/lib/event-server.ts`](src/lib/event-server.ts)
 - [`src/lib/events.ts`](src/lib/events.ts)
 - [`src/trpc/methods.ts`](src/trpc/methods.ts)
+
+#### Examples
+
+- [`src/app/examples/websockets/page.tsx`](src/app/examples/websockets/page.tsx)
 
 ### [next-pwa](https://www.npmjs.com/package/@ducanh2912/next-pwa)
 
