@@ -1,9 +1,13 @@
 import { initTRPC } from '@trpc/server';
 import type { inferAsyncReturnType } from '@trpc/server';
 import type { FetchCreateContextFnOptions } from '@trpc/server/adapters/fetch';
-import Pusher from 'pusher-http-edge';
 import { env } from '~/env.mjs';
 import { transformer } from './transformer';
+
+/**
+ * @enable WebSockets
+ */
+// import Pusher from 'pusher-http-edge';
 
 /**
  * @enable NextAuth

@@ -1,9 +1,13 @@
 import 'client-only';
 
 import { useEffect, useRef } from 'react';
-import PusherClient from 'pusher-js';
 import { env } from '~/env.mjs';
 import { events, type Events } from '~/lib/events';
+
+/**
+ * @enable WebSockets
+ */
+// import PusherClient from 'pusher-js';
 
 export const useEvent = <T extends keyof typeof events>({
   channelName,
