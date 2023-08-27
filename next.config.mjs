@@ -13,7 +13,10 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   experimental: {
-    serverActions: true,
+    /**
+     * @enable NextAuth
+     */
+    // serverActions: true,
   },
 };
 
