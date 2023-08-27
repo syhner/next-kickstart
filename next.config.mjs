@@ -1,6 +1,6 @@
 // @ts-check
 
-import { env } from './env.mjs';
+import { env } from './src/env.mjs';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
