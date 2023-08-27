@@ -25,7 +25,7 @@
     "db:view": "drizzle-kit studio"
   },
   "dependencies": {
-    "@auth/core": "^0.10.2",
+    "@auth/core": "0.0.0-manual.59d8da33",
     "@auth/drizzle-adapter": "^0.2.1",
     "@hookform/resolvers": "^3.3.0",
     "@planetscale/database": "^1.8.0",
@@ -44,7 +44,7 @@
     "drizzle-orm": "^0.28.2",
     "lucide-react": "^0.261.0",
     "next": "13.4.10",
-    "next-auth": "0.0.0-manual.83c4ebd1",
+    "next-auth": "0.0.0-manual.ffd05533",
     "next-themes": "^0.2.1",
     "pusher-http-edge": "^0.4.0",
     "pusher-js": "^8.3.0",
@@ -83,5 +83,10 @@
     "tailwindcss-animate": "^1.0.6",
     "typescript": "5.1.6",
     "vitest": "^0.34.2"
+  },
+  "pnpm": {
+    "overrides": {
+      "@auth/core": "0.12.0"
+    }
   }
 }

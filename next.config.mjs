@@ -12,6 +12,9 @@ const nextConfig = {
     // Handled during CI
     ignoreDuringBuilds: true,
   },
+  experimental: {
+    serverActions: true,
+  },
 };
 
 /**
