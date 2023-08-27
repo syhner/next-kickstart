@@ -22,7 +22,7 @@ export const useEvent = <T extends keyof typeof events>({
 
   useEffect(() => {
     /**
-     * @enable Pusher
+     * @enable WebSockets
      */
     // const pusherClient = new PusherClient(env.NEXT_PUBLIC_PUSHER_APP_KEY, {
     //   cluster: env.NEXT_PUBLIC_PUSHER_CLUSTER,
@@ -35,7 +35,7 @@ export const useEvent = <T extends keyof typeof events>({
 
     return () => {
       /**
-       * @enable Pusher
+       * @enable WebSockets
        */
       // channel.unbind(eventName);
       // pusherClient.unsubscribe(channelName);

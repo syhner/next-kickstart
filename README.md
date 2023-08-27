@@ -2,7 +2,7 @@
 
 Minimal yet feature packed Next.js 13.4 (app router) boilerplate. Zero setup to run on edge.
 
-Features which require enabling can be done so by uncommenting all lines under where `@enable {feature}` appears. Some of these may be optional, indicated with `@optional {purpose}` e.g.
+Features which require enabling (indicated below) can be enabled by uncommenting all lines under where `@enable {feature}` appears. Some of these may be optional, indicated with `@optional {purpose}` e.g.
 
 ```ts
 /**
@@ -21,7 +21,7 @@ Features which require enabling can be done so by uncommenting all lines under w
 - 🎨 [**Tailwind CSS**](#tailwind-css) - Utility-first CSS framework
 - 🧩 [**shadcn/ui**](#shadcnui) - Components built with Radix UI and Tailwind CSS
 - 🌐 [**tRPC**](#trpc) - Create end-to-end type-safe APIs that work in both client and server components
-- ⚡ [**WebSockets**](#websockets) - Real-time communication (using Pusher) (requires enabling)
+- ⚡ [**WebSockets**](#websockets-with-pusher) - Real-time communication (using Pusher) (requires enabling)
   - ❗️ using [pusher-http-edge](https://www.npmjs.com/package/pusher-http-edge) to run on edge, use the [nodejs runtime](src/app/api/trpc/[trpc]/route.ts) with a [stable version](https://www.npmjs.com/package/pusher) if desired
   - integrates with tRPC for end-to-end type-safe events
 - 💽 [**Drizzle**](#drizzle) - ORM with maximal type safety (requires enabling)
@@ -99,7 +99,9 @@ pnpm run dev
 - [`src/app/examples/client-component/page.tsx`](src/app/examples/client-component/page.tsx) - use in a client component
 - [`src/app/examples/server-component/page.tsx`](src/app/examples/server-component/page.tsx) - use in a server component
 
-### [WebSockets](https://pusher.com)
+### [WebSockets with Pusher](https://pusher.com)
+
+(requires enabling)
 
 - [`src/hooks/useEvent.ts`](src/hooks/useEvent.ts)
 - [`src/lib/event-server.ts`](src/lib/event-server.ts)

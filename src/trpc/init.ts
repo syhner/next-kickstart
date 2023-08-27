@@ -1,6 +1,8 @@
 import { initTRPC } from '@trpc/server';
 import type { inferAsyncReturnType } from '@trpc/server';
 import type { FetchCreateContextFnOptions } from '@trpc/server/adapters/fetch';
+import Pusher from 'pusher-http-edge';
+import { env } from '~/env.mjs';
 import { transformer } from './transformer';
 
 /**
@@ -10,13 +12,27 @@ import { transformer } from './transformer';
 
 export async function createContext(opts?: FetchCreateContextFnOptions) {
   /**
-   * Remove the other return statement after enabling
+   * Remove the other `session` declaration after enabling
    * @enable NextAuth
    */
   // const session = await auth();
   // return { session };
+  const session = { user: null };
 
-  return { session: { user: null } };
+  /**
+   * Remove the other `eventServer` declaration after enabling
+   * @enable WebSockets
+   */
+  // const eventServer = new Pusher({
+  //   appId: env.PUSHER_APP_ID,
+  //   key: env.NEXT_PUBLIC_PUSHER_APP_KEY,
+  //   secret: env.PUSHER_SECRET,
+  //   cluster: env.NEXT_PUBLIC_PUSHER_CLUSTER,
+  //   useTLS: true,
+  // });
+  const eventServer = { trigger: async (...args: unknown[]) => {} };
+
+  return { eventServer, session };
 }
 
 export type Context = inferAsyncReturnType<typeof createContext>;

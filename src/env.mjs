@@ -17,10 +17,10 @@ export const env = createEnv({
    */
   client: {
     /**
-     * @enable Pusher
+     * @enable WebSockets
      */
-    // NEXT_PUBLIC_PUSHER_APP_KEY: z.string().min(1),
-    // NEXT_PUBLIC_PUSHER_CLUSTER: z.string().min(1),
+    NEXT_PUBLIC_PUSHER_APP_KEY: z.string().min(1),
+    NEXT_PUBLIC_PUSHER_CLUSTER: z.string().min(1),
   },
   /**
    * Serverside Environment variables, not available on the client.
@@ -42,10 +42,10 @@ export const env = createEnv({
     // NEXTAUTH_SECRET: z.string().min(32),
 
     /**
-     * @enable Pusher
+     * @enable WebSockets
      */
-    // PUSHER_APP_ID: z.string().min(1),
-    // PUSHER_SECRET: z.string().min(1),
+    PUSHER_APP_ID: z.string().min(1),
+    PUSHER_SECRET: z.string().min(1),
 
     /**
      * Set PWA environment variable to true to enable PWA
@@ -65,10 +65,10 @@ export const env = createEnv({
      * Client
      */
     /**
-     * @enable Pusher
+     * @enable WebSockets
      */
-    // NEXT_PUBLIC_PUSHER_APP_KEY: process.env.NEXT_PUBLIC_PUSHER_APP_KEY,
-    // NEXT_PUBLIC_PUSHER_CLUSTER: process.env.NEXT_PUBLIC_PUSHER_CLUSTER,
+    NEXT_PUBLIC_PUSHER_APP_KEY: process.env.NEXT_PUBLIC_PUSHER_APP_KEY,
+    NEXT_PUBLIC_PUSHER_CLUSTER: process.env.NEXT_PUBLIC_PUSHER_CLUSTER,
 
     /**
      * Server
@@ -88,10 +88,10 @@ export const env = createEnv({
     // NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
 
     /**
-     * @enable Pusher
+     * @enable WebSockets
      */
-    // PUSHER_APP_ID: process.env.PUSHER_APP_ID,
-    // PUSHER_SECRET: process.env.PUSHER_SECRET,
+    PUSHER_APP_ID: process.env.PUSHER_APP_ID,
+    PUSHER_SECRET: process.env.PUSHER_SECRET,
 
     PWA: process.env.PWA,
   },
