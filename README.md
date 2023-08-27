@@ -2,7 +2,7 @@
 
 Zero setup, edge-ready, feature-packed Next.js 13.4 (app router) boilerplate.
 
-Features which require enabling (indicated below) can be enabled by uncommenting all lines under where `@enable {feature}` appears. Some of these may be optional, indicated with `@optional {purpose}` e.g.
+Some features depend on environment variables and so require enabling (indicated below with 💡). They are disabled by default so that the app runs without any setup. They can be enabled by uncommenting all lines under where `@enable {feature}` appears. Some of these may be optional, indicated with `@optional {purpose}` e.g.
 
 ```ts
 /**
@@ -21,14 +21,14 @@ Features which require enabling (indicated below) can be enabled by uncommenting
 - 🎨 [**Tailwind CSS**](#tailwind-css) - Utility-first CSS framework
 - 🧩 [**shadcn/ui**](#shadcnui) - Components built with Radix UI and Tailwind CSS
 - 🌐 [**tRPC**](#trpc) - Create end-to-end type-safe APIs that work in both client and server components
-- ⚡ [**WebSockets**](#websockets-with-pusher) - Real-time communication (using Pusher) (requires enabling)
+- ⚡ [**WebSockets**](#websockets-with-pusher) 💡 - Real-time communication (using Pusher)
   - ❗️ using [pusher-http-edge](https://www.npmjs.com/package/pusher-http-edge) to run on edge, use the [nodejs runtime](src/app/api/trpc/[trpc]/route.ts) with a [stable version](https://www.npmjs.com/package/pusher) if desired
   - 🔗 integrates with tRPC for end-to-end type-safe events
-- 💽 [**Drizzle**](#drizzle) - ORM with maximal type safety (requires enabling)
-- 🔒 [**NextAuth**](#nextauth) - Flexible and secure authentication (requires enabling)
+- 💽 [**Drizzle**](#drizzle) 💡 - ORM with maximal type safety
+- 🔒 [**NextAuth**](#nextauth) 💡 - Flexible and secure authentication
   - ❗️ using [next-auth@experimental](https://www.npmjs.com/package/next-auth/v/0.0.0-manual.ffd05533) to run on edge. use the [nodejs runtime](src/app/api/auth/[...nextauth]/route.ts) with a [stable version](https://www.npmjs.com/package/next-auth) if desired
   - 🔗 integrates with Drizzle to optionally store auth data
-- 📦 [**next-pwa**](#next-pwa) - Installable as a progressive web app (PWA) (requires enabling)
+- 📦 [**next-pwa**](#next-pwa) 💡 - Installable as a progressive web app (PWA)
 - 🧪 [**Vitest**](#vitest) - Flexible testing framework
 - 🐙 [**React Testing Library**](#react-testing-library) - Maintainable component testing
   - 🔗 integrates with Vitest as your testing framework
@@ -102,7 +102,7 @@ pnpm run dev
 
 ### [WebSockets with Pusher](https://pusher.com)
 
-(requires enabling)
+💡 (requires enabling)
 
 - [`src/hooks/useEvent.ts`](src/hooks/useEvent.ts)
 - [`src/lib/event-server.ts`](src/lib/event-server.ts)
@@ -115,7 +115,7 @@ pnpm run dev
 
 ### [Drizzle](https://orm.drizzle.team/)
 
-(requires enabling)
+💡 (requires enabling)
 
 - [`src/db/`](src/db/)
 - [`src/lib/db.ts`](src/lib/db.ts)
@@ -123,7 +123,7 @@ pnpm run dev
 
 ### [NextAuth](https://next-auth.js.org/)
 
-(requires enabling)
+💡 (requires enabling)
 
 - [`src/app/api/auth/[...nextauth]/route.ts`](src/app/api/auth/[...nextauth]/route.ts)
 - [`src/components/auth.tsx`](src/components/auth.tsx)
