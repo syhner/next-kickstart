@@ -1,4 +1,4 @@
-// @vitest-environment edge-runtime
+// @vitest-environment node
 
 import { expect, it, test } from 'vitest';
 import { appRouter } from '.';
