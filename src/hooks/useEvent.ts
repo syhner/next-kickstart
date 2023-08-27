@@ -34,7 +34,12 @@ export const useEvent = <T extends keyof typeof events>({
     //
     // const channel = pusherClient.subscribe(channelName);
     // channel.bind(eventName, (event: unknown) => {
-    //   onEventRef.current(event as Events[T]);
+    //   const eventSchema = events[eventName];
+    //   const parsedEventResult = eventSchema.safeParse(event);
+    //
+    //   if (!parsedEventResult.success) return;
+    //
+    //   onEventRef.current(events[eventName].parse(parsedEventResult.data));
     // });
 
     return () => {
