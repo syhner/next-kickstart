@@ -32,7 +32,7 @@ export const env = createEnv({
     /**
      * @enable Drizzle
      */
-    DATABASE_URL: z.string().url(),
+    // DATABASE_URL: z.string().url(),
 
     /**
      * @enable NextAuth
@@ -78,7 +78,7 @@ export const env = createEnv({
     /**
      * @enable Drizzle
      */
-    DATABASE_URL: process.env.DATABASE_URL,
+    // DATABASE_URL: process.env.DATABASE_URL,
 
     /**
      * @enable NextAuth

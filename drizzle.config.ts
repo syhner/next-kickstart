@@ -1,8 +1,8 @@
+/* eslint-disable no-process-env */
+
 /**
  * @enable Drizzle
  */
-/* eslint-disable no-process-env */
-//
 // import * as dotenv from 'dotenv';
 // import type { Config } from 'drizzle-kit';
 // import { z } from 'zod';
