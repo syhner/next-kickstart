@@ -57,9 +57,8 @@ pnpm run dev
 
 ### [T3 Env](https://github.com/t3-oss/t3-env)
 
-- [`env.mjs`](env.mjs) - configure environment variables
+- [`src/env.mjs`](src/env.mjs) - configure environment variables
 - [`next.config.mjs`](next.config.mjs) - environment variables are validated at build-time
-- [`src/env.ts`](src/env.ts) - re-export validated environment variables to be imported easily `from '~/env'`
 
 ### [ESLint](https://eslint.org/)
 
