@@ -28,11 +28,6 @@ export const env = createEnv({
    */
   server: {
     ANALYZE: toggle.default('false'),
-    /**
-     * @enable NextAuth
-     */
-    // AUTH_GITHUB_ID: z.string().min(1),
-    // AUTH_GITHUB_SECRET: z.string().min(1),
 
     /**
      * @enable Drizzle
@@ -42,6 +37,8 @@ export const env = createEnv({
     /**
      * @enable NextAuth
      */
+    // NEXTAUTH_GITHUB_ID: z.string().min(1),
+    // NEXTAUTH_GITHUB_SECRET: z.string().min(1),
     // NEXTAUTH_SECRET: z.string().min(32),
 
     /**
@@ -77,11 +74,6 @@ export const env = createEnv({
      * Server
      */
     ANALYZE: process.env.ANALYZE,
-    /**
-     * @enable NextAuth
-     */
-    // AUTH_GITHUB_ID: process.env.AUTH_GITHUB_ID,
-    // AUTH_GITHUB_SECRET: process.env.AUTH_GITHUB_SECRET,
 
     /**
      * @enable Drizzle
@@ -91,6 +83,8 @@ export const env = createEnv({
     /**
      * @enable NextAuth
      */
+    // NEXTAUTH_GITHUB_ID: process.env.NEXTAUTH_GITHUB_ID,
+    // NEXTAUTH_GITHUB_SECRET: process.env.NEXTAUTH_GITHUB_SECRET,
     // NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
 
     /**

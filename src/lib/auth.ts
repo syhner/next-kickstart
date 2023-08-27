@@ -24,8 +24,8 @@
 //
 //   providers: [
 //     GithubProvider({
-//       clientId: env.AUTH_GITHUB_ID,
-//       clientSecret: env.AUTH_GITHUB_SECRET,
+//       clientId: env.NEXTAUTH_GITHUB_ID,
+//       clientSecret: env.NEXTAUTH_GITHUB_SECRET,
 //     }),
 //   ],
 // });
