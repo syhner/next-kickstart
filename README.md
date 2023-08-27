@@ -23,14 +23,15 @@ Features which require enabling (indicated below) can be enabled by uncommenting
 - 🌐 [**tRPC**](#trpc) - Create end-to-end type-safe APIs that work in both client and server components
 - ⚡ [**WebSockets**](#websockets-with-pusher) - Real-time communication (using Pusher) (requires enabling)
   - ❗️ using [pusher-http-edge](https://www.npmjs.com/package/pusher-http-edge) to run on edge, use the [nodejs runtime](src/app/api/trpc/[trpc]/route.ts) with a [stable version](https://www.npmjs.com/package/pusher) if desired
-  - integrates with tRPC for end-to-end type-safe events
+  - 🔗 integrates with tRPC for end-to-end type-safe events
 - 💽 [**Drizzle**](#drizzle) - ORM with maximal type safety (requires enabling)
 - 🔒 [**NextAuth**](#nextauth) - Flexible and secure authentication (requires enabling)
   - ❗️ using [next-auth@experimental](https://www.npmjs.com/package/next-auth/v/0.0.0-manual.ffd05533) to run on edge. use the [nodejs runtime](src/app/api/auth/[...nextauth]/route.ts) with a [stable version](https://www.npmjs.com/package/next-auth) if desired
-  - optionally store auth data with Drizzle
+  - 🔗 integrates with Drizzle to optionally store auth data
 - 📦 [**next-pwa**](#next-pwa) - Installable as a progressive web app (PWA) (requires enabling)
 - 🧪 [**Vitest**](#vitest) - Flexible testing framework
 - 🐙 [**React Testing Library**](#react-testing-library) - Maintainable component testing
+  - 🔗 integrates with Vitest as your testing framework
 - 🎭 [**Playwright**](#playwright) - End-to-end testing against multiple environments
 - 🔄 [**GitHub Actions**](#github-actions) - Robust CI/CD
 - 💻 [**VS Code configuration**](#vs-code) - Configurations for easy debugging
