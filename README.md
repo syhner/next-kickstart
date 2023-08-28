@@ -39,7 +39,7 @@ export const runtime: ServerRuntime = 'nodejs';
 - 🐙 [**React Testing Library**](https://testing-library.com/docs/react-testing-library/intro/) - Maintainable component testing
   - 🔗 integrates with Vitest as your testing framework
 - 🎭 [**Playwright**](https://playwright.dev/) - End-to-end testing against multiple environments
-- 🐳 [**Docker**](https://www.docker.com/) - Local and production Dockerfiles (and docker-compose) files for running anywhere
+- 🐳 [**Docker**](https://www.docker.com/) - Local and production and docker-compose and Dockerfiles for running anywhere
 - 🔄 [**GitHub Actions**](https://github.com/features/actions) - Robust CI/CD
 - 💻 [**VS Code configuration**](https://code.visualstudio.com/) - Configurations for easy debugging
 
