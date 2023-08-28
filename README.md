@@ -1,6 +1,6 @@
 ## next-kickstart
 
-Zero setup, edge-ready, feature-packed Next.js 13.4 (app router) boilerplate.
+Feature packed Next.js 13.4 (app router) boilerplate. Zero setup. Edge ready.
 
 Some features depend on environment variables (indicated in features list with 💡) and so require enabling. They are disabled by default so that the app runs without any setup. They can be enabled by uncommenting all lines under where `@enable {feature}` appears. Some of these may be optional, indicated with `@optional {purpose}` e.g.
 
@@ -39,6 +39,7 @@ export const runtime: ServerRuntime = 'nodejs';
 - 🐙 [**React Testing Library**](#react-testing-library) - Maintainable component testing
   - 🔗 integrates with Vitest as your testing framework
 - 🎭 [**Playwright**](#playwright) - End-to-end testing against multiple environments
+- 🐳 [**Docker**](#docker) - Local and production Dockerfiles (and docker-compose) files for running anywhere
 - 🔄 [**GitHub Actions**](#github-actions) - Robust CI/CD
 - 💻 [**VS Code configuration**](#vs-code) - Configurations for easy debugging
 
@@ -54,10 +55,18 @@ export const runtime: ServerRuntime = 'nodejs';
 2. Clone your new repository
 3. Install dependencies and run the development server
 
-```sh
-pnpm install
-pnpm run dev
-```
+- with pnpm
+
+  ```sh
+  pnpm install
+  pnpm run dev
+  ```
+
+- or with Docker
+
+  ```sh
+  docker-compose --file docker-compose.dev.yml up
+  ```
 
 ## ⚙️ Configuration
 
@@ -155,6 +164,14 @@ pnpm run dev
 
 - [`e2e/`](e2e/)
 - [`playwright.config.ts`](playwright.config.ts)
+
+### [Docker](https://www.docker.com/)
+
+- [`.dockerignore`](.dockerignore)
+- [`docker-compose.dev.yml`](docker-compose.dev.yml)
+- [`docker-compose.prod.yml`](docker-compose.prod.yml)
+- [`Dockerfile.dev`](Dockerfile.dev)
+- [`Dockerfile.prod`](Dockerfile.prod)
 
 ### [GitHub Actions](https://github.com/features/actions)
 
