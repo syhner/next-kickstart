@@ -43,11 +43,6 @@ export const runtime: ServerRuntime = 'nodejs';
 - 🔄 [**GitHub Actions**](https://github.com/features/actions) - Robust CI/CD
 - 💻 [**VS Code configuration**](https://code.visualstudio.com/) - Configurations for easy debugging
 
-### [TypeScript](https://www.typescriptlang.org/)
-
-- [`tsconfig.json`](tsconfig.json) - all modifications from [create-next-app](https://www.npmjs.com/
-- [`types/reset.d.ts`](types/reset.d.ts) - using [ts-reset](https://github.com/total-typescript/ts-reset)
-
 ## 🌱 Getting started
 
 🚀 **Option 1: Clone and deploy with Vercel**
