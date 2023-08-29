@@ -60,14 +60,14 @@ export const runtime: ServerRuntime = 'nodejs';
 2. Clone your new repository
 3. Install dependencies and run the development server
 
-- with pnpm
+- with [pnpm](https://pnpm.io/installation)
 
   ```sh
   pnpm install
   pnpm run dev
   ```
 
-- or with Docker
+- or with [Docker](https://docs.docker.com/get-docker/)
 
   ```sh
   docker-compose --file docker-compose.dev.yml up
