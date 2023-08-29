@@ -164,6 +164,7 @@ export const runtime: ServerRuntime = 'nodejs';
 ### [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 
 - [`src/app/page.test.tsx`](src/app/page.test.tsx)
+- [`testing/setup.ts`](testing/setup.ts)
 
 ### [Playwright](https://playwright.dev/)
 
