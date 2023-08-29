@@ -44,6 +44,6 @@ workbox-*.js.map
 .git/
 .github/
 .vscode/
+docker/
 .dockerignore
-Dockerfile*
 README.md

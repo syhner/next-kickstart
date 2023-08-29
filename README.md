@@ -70,7 +70,7 @@ export const runtime: ServerRuntime = 'nodejs';
 - or with [Docker](https://docs.docker.com/get-docker/)
 
   ```sh
-  docker-compose --file docker-compose.dev.yml up
+  docker-compose --file docker/dev/docker-compose.yml up
   ```
 
 ## ⚙️ Configuration
@@ -173,10 +173,7 @@ export const runtime: ServerRuntime = 'nodejs';
 ### [Docker](https://www.docker.com/)
 
 - [`.dockerignore`](.dockerignore)
-- [`docker-compose.dev.yml`](docker-compose.dev.yml)
-- [`docker-compose.prod.yml`](docker-compose.prod.yml)
-- [`Dockerfile.dev`](Dockerfile.dev)
-- [`Dockerfile.prod`](Dockerfile.prod)
+- [`docker/`](docker/) - Dockerfile and docker-compose.yml for development and production
 
 ### [GitHub Actions](https://github.com/features/actions)
 

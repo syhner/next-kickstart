@@ -4,7 +4,7 @@ services:
   next:
     container_name: next-prod
     build:
-      context: .
-      dockerfile: Dockerfile.prod
+      context: ../../
+      dockerfile: docker/prod/Dockerfile
     ports:
       - '3000:3000'
