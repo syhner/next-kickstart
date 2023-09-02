@@ -3,8 +3,6 @@
 
 import { env } from './src/env.mjs';
 
-console.log(process.env.ABC);
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: env.NODE_ENV === 'production' ? 'standalone' : undefined,
