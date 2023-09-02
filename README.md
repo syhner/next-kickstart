@@ -12,12 +12,6 @@ Some features depend on environment variables (indicated in features list with �
 // adapter: DrizzleAdapter(db)
 ```
 
-Some features are using experimental versions (indicated in features list with ❗️) and so are not production ready. They can be swapped out with stable versions that are referenced alongside, which will require using the nodejs runtime instead of the edge runtime (which in this repo is set in the [root layout](src/app/layout.tsx)) with
-
-```ts
-export const runtime: ServerRuntime = 'nodejs';
-```
-
 ## 📚 Features
 
 - 🏗️ [**TypeScript**](https://www.typescriptlang.org/) - Configured to maximize type safety
