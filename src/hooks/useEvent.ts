@@ -7,7 +7,7 @@ import { events, type Events } from '~/lib/events';
 /**
  * @enable WebSockets
  */
-// import PusherClient from 'pusher-js';
+// import PusherClient from 'pusher-js/worker';
 
 export const useEvent = <T extends keyof typeof events>({
   channelName,
