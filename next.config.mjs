@@ -15,6 +15,7 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   experimental: {
+    mdxRs: true,
     /**
      * @enable NextAuth
      */
@@ -38,7 +39,9 @@ const nextConfigWithPlugins = async (phase, { defaultConfig }) => {
     disable: !env.PWA,
   });
 
-  return withBundleAnalyzer(withPWA(nextConfig));
+  const withMDX = (await import('@next/mdx')).default();
+
+  return withBundleAnalyzer(withPWA(withMDX(nextConfig)));
 };
 
 export default nextConfigWithPlugins;

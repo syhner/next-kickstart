@@ -34,6 +34,7 @@ Some features depend on environment variables (indicated in features list with �
 - 📁 [**Absolute imports**](https://nextjs.org/docs/app/building-your-application/configuring/absolute-imports-and-module-aliases) - Easier and cleaner module imports
 - 🎨 [**Tailwind CSS**](https://tailwindcss.com/) - Utility-first CSS framework
 - 🧩 [**shadcn/ui**](https://ui.shadcn.com/) - Components built with Radix UI and Tailwind CSS
+- 📝 [**MDX**](https://mdxjs.com/) - Markdown for the component era
 - 💻 [**VS Code configurations**](https://code.visualstudio.com/) - Configurations for easy debugging
 
 ### Testing
@@ -77,19 +78,50 @@ Some features depend on environment variables (indicated in features list with �
 
 ## ⚙️ Configuration
 
-### [TypeScript](https://www.typescriptlang.org/)
+### [Docker](https://www.docker.com/)
 
-- [`tsconfig.json`](tsconfig.json) - all modifications from [create-next-app](https://www.npmjs.com/package/create-next-app) are explained with comments
-- [`types/reset.d.ts`](types/reset.d.ts) - using [ts-reset](https://github.com/total-typescript/ts-reset) to increase type-safety
+- [`.dockerignore`](.dockerignore)
+- [`docker/`](docker/) - Dockerfile and docker-compose.yml for development and production
 
-### [T3 Env](https://github.com/t3-oss/t3-env)
+### [Drizzle](https://orm.drizzle.team/)
 
-- [`src/env.mjs`](src/env.mjs) - configure environment variables
-- [`next.config.mjs`](next.config.mjs) - environment variables are validated at build-time
+💡 (requires enabling)
+
+- [`src/db/`](src/db/)
+- [`src/lib/db.ts`](src/lib/db.ts)
+- [`drizzle.config.ts`](drizzle.config.ts)
 
 ### [ESLint](https://eslint.org/)
 
 - [`.eslintrc.json`](.eslintrc.json)
+
+### [GitHub Actions](https://github.com/features/actions)
+
+- [`.github/workflows/ci.yml`](.github/workflows/ci.yml) - type-checking and linting (hence these errors are ignored in [`next.config.mjs`](next.config.mjs))
+
+### [MDX](https://mdxjs.com/)
+
+- [`mdx-components.tsx`](mdx-components.tsx)
+
+### [next-pwa](https://www.npmjs.com/package/@ducanh2912/next-pwa)
+
+- [`public/icon-512x512.png`](public/icon-512x512.png)
+- [`public/manifest.json`](public/manifest.json)
+- [`next.config.mjs`](next.config.mjs)
+
+### [NextAuth](https://next-auth.js.org/)
+
+💡 (requires enabling)
+
+- [`src/app/api/auth/[...nextauth]/route.ts`](src/app/api/auth/[...nextauth]/route.ts)
+- [`src/components/auth.tsx`](src/components/auth.tsx)
+- [`src/db/schemas/auth.ts`](src/db/schemas/auth.ts) — store auth data (users, accounts, sessions, verification tokens) in database
+- [`src/lib/auth.ts`](src/lib/auth.ts)
+
+### [Playwright](https://playwright.dev/)
+
+- [`e2e/`](e2e/)
+- [`playwright.config.ts`](playwright.config.ts)
 
 ### [Prettier](https://prettier.io/)
 
@@ -97,10 +129,10 @@ Some features depend on environment variables (indicated in features list with �
 - [`.prettierignore`](.prettierignore)
 - [`.prettierrc.json`](.prettierrc.json)
 
-### [Tailwind CSS](https://tailwindcss.com/)
+### [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 
-- [`src/styles/globals.css`](src/styles/globals.css)
-- [`tailwind.config.js`](tailwind.config.js)
+- [`src/app/page.test.tsx`](src/app/page.test.tsx)
+- [`testing/setup.ts`](testing/setup.ts)
 
 ### [shadcn/ui](https://ui.shadcn.com/)
 
@@ -109,18 +141,43 @@ Some features depend on environment variables (indicated in features list with �
 - [`src/components/theme-toggle.tsx`](src/components/theme-toggle.tsx)
 - [`components.json`](components.json)
 
+### [T3 Env](https://github.com/t3-oss/t3-env)
+
+- [`src/env.mjs`](src/env.mjs) - configure environment variables
+- [`next.config.mjs`](next.config.mjs) - environment variables are validated at build-time
+
+### [Tailwind CSS](https://tailwindcss.com/)
+
+- [`src/styles/globals.css`](src/styles/globals.css)
+- [`tailwind.config.js`](tailwind.config.js)
+
 ### [tRPC](https://trpc.io/)
 
 - [`src/app/api/trpc/[trpc]/route.ts`](src/components/providers/trpc-provider.tsx)
 - [`src/components/providers/trpc-provider.tsx`](src/app/api/trpc/[trpc]/route.ts)
 - [`src/trpc/`](src/trpc)
-  - [`trpc-caller.ts`](src/trpc/trpc-caller.ts) - trpc caller to be used in server components
-  - [`trpc-react.ts`](src/trpc/trpc-reacer.ts) - trpc to be used in client components
 
 #### Examples
 
 - [`src/app/examples/client-component/page.tsx`](src/app/examples/client-component/page.tsx) - use in a client component
 - [`src/app/examples/server-component/page.tsx`](src/app/examples/server-component/page.tsx) - use in a server component
+
+### [TypeScript](https://www.typescriptlang.org/)
+
+- [`tsconfig.json`](tsconfig.json) - all modifications from [create-next-app](https://www.npmjs.com/package/create-next-app) are explained with comments
+- [`types/reset.d.ts`](types/reset.d.ts) - using [ts-reset](https://github.com/total-typescript/ts-reset) to increase type-safety
+
+### [Vitest](https://vitest.dev/)
+
+- [`testing/setup.ts`](testing/setup.ts)
+- [`types/vitest.d.ts`](types/vitest.d.ts)
+- [`vitest.config.ts`](vitest.config.ts)
+
+### [VS Code](https://code.visualstudio.com/)
+
+- [`.vscode/extensions.json`](.vscode/extensions.json) - recommended workspace extensions
+- [`.vscode/launch.json`](.vscode/launch.json) - debug configurations
+- [`.vscode/settings.json`](.vscode/settings.json) - use project TypeScript version
 
 ### [WebSockets with Pusher](https://pusher.com)
 
@@ -133,57 +190,3 @@ Some features depend on environment variables (indicated in features list with �
 #### Examples
 
 - [`src/app/examples/websockets/page.tsx`](src/app/examples/websockets/page.tsx)
-
-### [Drizzle](https://orm.drizzle.team/)
-
-💡 (requires enabling)
-
-- [`src/db/`](src/db/)
-- [`src/lib/db.ts`](src/lib/db.ts)
-- [`drizzle.config.ts`](drizzle.config.ts)
-
-### [NextAuth](https://next-auth.js.org/)
-
-💡 (requires enabling)
-
-- [`src/app/api/auth/[...nextauth]/route.ts`](src/app/api/auth/[...nextauth]/route.ts)
-- [`src/components/auth.tsx`](src/components/auth.tsx)
-- [`src/db/schemas/auth.ts`](src/db/schemas/auth.ts) — store auth data (users, accounts, sessions, verification tokens) in database
-- [`src/lib/auth.ts`](src/lib/auth.ts)
-
-### [next-pwa](https://www.npmjs.com/package/@ducanh2912/next-pwa)
-
-- [`public/icon-512x512.png`](public/icon-512x512.png)
-- [`public/manifest.json`](public/manifest.json)
-- [`next.config.mjs`](next.config.mjs)
-
-### [Vitest](https://vitest.dev/)
-
-- [`testing/setup.ts`](testing/setup.ts)
-- [`types/vitest.d.ts`](types/vitest.d.ts)
-- [`vitest.config.ts`](vitest.config.ts)
-
-### [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
-
-- [`src/app/page.test.tsx`](src/app/page.test.tsx)
-- [`testing/setup.ts`](testing/setup.ts)
-
-### [Playwright](https://playwright.dev/)
-
-- [`e2e/`](e2e/)
-- [`playwright.config.ts`](playwright.config.ts)
-
-### [Docker](https://www.docker.com/)
-
-- [`.dockerignore`](.dockerignore)
-- [`docker/`](docker/) - Dockerfile and docker-compose.yml for development and production
-
-### [GitHub Actions](https://github.com/features/actions)
-
-- [`.github/workflows/ci.yml`](.github/workflows/ci.yml) - type-checking and linting (hence these errors are ignored in [`next.config.mjs`](next.config.mjs))
-
-### [VS Code](https://code.visualstudio.com/)
-
-- [`.vscode/extensions.json`](.vscode/extensions.json) - recommended workspace extensions
-- [`.vscode/launch.json`](.vscode/launch.json) - debug configurations
-- [`.vscode/settings.json`](.vscode/settings.json) - use project TypeScript version
