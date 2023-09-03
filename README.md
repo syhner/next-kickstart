@@ -31,10 +31,10 @@ Some features depend on environment variables (indicated in features list with �
 
 - 📏 [**ESLint**](https://eslint.org/) - Consistent code standards
 - ✨ [**Prettier**](https://prettier.io/) - Consistent code styling
-- 📁 [**Absolute imports**](https://nextjs.org/docs/app/building-your-application/configuring/absolute-imports-and-module-aliases) - Easier and cleaner module imports
 - 🎨 [**Tailwind CSS**](https://tailwindcss.com/) - Utility-first CSS framework
 - 🧩 [**shadcn/ui**](https://ui.shadcn.com/) - Components built with Radix UI and Tailwind CSS
-- 📝 [**MDX**](https://mdxjs.com/) - Markdown for the component era
+- 📝 [**MDX**](https://mdxjs.com/) - Use markdown with components
+- 📁 [**Absolute imports**](https://nextjs.org/docs/app/building-your-application/configuring/absolute-imports-and-module-aliases) - Easier and cleaner module imports
 - 💻 [**VS Code configurations**](https://code.visualstudio.com/) - Configurations for easy debugging
 
 ### Testing
@@ -48,7 +48,7 @@ Some features depend on environment variables (indicated in features list with �
 
 - 📊 [**Bundle analyzer**](https://www.npmjs.com/package/@next/bundle-analyzer) - Analyze bundle sizes in each environment with `pnpm run build:analyze`
 - 📦💡 [**next-pwa**](https://www.npmjs.com/package/@ducanh2912/next-pwa) - Make your website as a progressive web app (PWA)
-- 🐳 [**Docker**](https://www.docker.com/) - Local and production and docker-compose and Dockerfiles for running anywhere
+- 🐳 [**Docker**](https://www.docker.com/) - (local and production) Docker-compose and Dockerfiles for running anywhere
 - 🔄 [**GitHub Actions**](https://github.com/features/actions) - Robust CI/CD
 
 ## 🌱 Getting started
@@ -59,7 +59,7 @@ Some features depend on environment variables (indicated in features list with �
 
 📋 **Option 2: Clone and run locally**
 
-1. [Use this template](https://github.com/new?template_name=next-kickstart&template_owner=Syhner)
+1. [Fork](https://github.com/syhner/next-kickstart/fork) or [use the template](https://github.com/new?template_name=next-kickstart)
 2. Clone your new repository
 3. Install dependencies and run the development server
 
