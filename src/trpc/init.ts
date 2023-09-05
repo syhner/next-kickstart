@@ -20,7 +20,6 @@ export async function createContext(opts?: FetchCreateContextFnOptions) {
    * @enable NextAuth
    */
   // const session = await auth();
-  // return { session };
   const session = { user: null };
 
   /**
