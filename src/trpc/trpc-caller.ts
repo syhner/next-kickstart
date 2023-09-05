@@ -3,4 +3,6 @@ import 'server-only';
 import { createContext } from './init';
 import { appRouter } from './router';
 
-export const trpcCaller = appRouter.createCaller(await createContext());
+export const createTrpcCaller = async () => {
+  return appRouter.createCaller(await createContext());
+};

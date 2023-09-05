@@ -1,7 +1,8 @@
-import { trpcCaller } from '~/trpc/trpc-caller';
+import { createTrpcCaller } from '~/trpc/trpc-caller';
 
 export default async function Page() {
-  const health = await trpcCaller.health();
+  const trpcCaller = await createTrpcCaller();
+  const health = trpcCaller.health();
 
   return <div>{`health: ${health}`}</div>;
 }

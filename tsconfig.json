@@ -36,7 +36,7 @@
     /* Language and Environment */
     "jsx": "preserve",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "target": "ES2017", // Drizzle Studio requires >=ES2015, src/trpc/trpc-caller requires >=ES2017
+    "target": "ES2015", // Drizzle Studio requires >=ES2015
 
     /* Compiler Diagnostics */
 
