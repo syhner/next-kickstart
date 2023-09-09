@@ -67,7 +67,6 @@
     "@next/bundle-analyzer": "^13.4.10",
     "@playwright/test": "^1.37.1",
     "@tailwindcss/typography": "^0.5.9",
-    "@testing-library/jest-dom": "^6.0.1",
     "@testing-library/react": "^14.0.0",
     "@total-typescript/ts-reset": "^0.4.2",
     "@types/node": "20.5.9",
@@ -87,7 +86,8 @@
     "tailwindcss": "3.3.3",
     "tailwindcss-animate": "^1.0.6",
     "typescript": "5.2.2",
-    "vitest": "^0.34.2"
+    "vitest": "^0.34.2",
+    "vitest-dom": "^0.1.0"
   },
   "pnpm": {
     "overrides": {

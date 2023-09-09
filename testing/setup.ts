@@ -1,8 +1,7 @@
-import matchers from '@testing-library/jest-dom/matchers';
-import { cleanup } from '@testing-library/react';
-import { afterEach, expect, vi } from 'vitest';
+import 'vitest-dom/extend-expect';
 
-expect.extend(matchers);
+import { cleanup } from '@testing-library/react';
+import { afterEach, vi } from 'vitest';
 
 vi.mock('next-auth', () => {
   const auth = () => ({ user: null });
