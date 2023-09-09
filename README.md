@@ -63,11 +63,11 @@ Some features depend on environment variables (indicated in features list with ð
 2. Clone your new repository
 3. Install dependencies and run the development server
 
-- with [pnpm](https://pnpm.io/installation)
+- with [bun](https://bun.sh/docs/installation)
 
   ```sh
-  pnpm install
-  pnpm run dev
+  bun install
+  bun run dev
   ```
 
 - or with [Docker](https://docs.docker.com/get-docker/)

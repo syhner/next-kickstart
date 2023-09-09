@@ -1,10 +1,7 @@
 /* eslint-disable no-process-env */
 
 import { defineConfig, devices } from '@playwright/test';
-import * as dotenv from 'dotenv';
 import { z } from 'zod';
-
-dotenv.config({ path: '.env.local' });
 
 const CI = z
   .enum(['true', 'false', '0', '1'])
@@ -61,7 +58,7 @@ export default defineConfig({
     // },
   ],
   webServer: {
-    command: 'pnpm run dev',
+    command: 'bun run dev',
     url: baseURL,
     timeout: 1000 * 60 * 5,
     reuseExistingServer: !CI,

@@ -4,6 +4,7 @@
     "dbaeumer.vscode-eslint",
     "bradlc.vscode-tailwindcss",
     "zixuanchen.vitest-explorer",
-    "unifiedjs.vscode-mdx"
+    "unifiedjs.vscode-mdx",
+    "oven.bun-vscode"
   ]
 }

@@ -7,40 +7,34 @@ jobs:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        node-version: [18]
+        bun-version: [1.0.0]
     timeout-minutes: 20
     steps:
       - name: Checkout source code
         uses: actions/checkout@v3
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
+      - name: Setup bun
+        uses: oven-sh/setup-bun@v1
         with:
-          version: 8
-
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'pnpm'
+          bun-version: ${{ matrix.bun-version }}
 
       - name: Install dependencies
-        run: pnpm install
+        run: bun install
 
       - name: Install Playwright browsers
-        run: pnpm exec playwright install --with-deps
+        run: bun playwright install --with-deps
 
       - name: Typecheck
-        run: pnpm run typecheck
+        run: bun run typecheck
 
       - name: Lint
-        run: pnpm run lint
+        run: bun run lint
 
       - name: Run unit / component tests
-        run: pnpm run test:unit
+        run: bun run test:unit
 
       - name: Run Playwright tests
-        run: pnpm run test:e2e
+        run: bun run test:e2e
 
       - name: Upload Playwright report
         uses: actions/upload-artifact@v3

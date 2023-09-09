@@ -3,11 +3,8 @@
 /**
  * @enable Drizzle
  */
-// import * as dotenv from 'dotenv';
 // import type { Config } from 'drizzle-kit';
 // import { z } from 'zod';
-//
-// dotenv.config({ path: '.env.local' });
 //
 // export default {
 //   schema: './src/db/schemas/*.ts',
