@@ -34,14 +34,9 @@ const nextConfigWithPlugins = async (phase, { defaultConfig }) => {
     enabled: env.ANALYZE,
   });
 
-  const withPWA = (await import('@ducanh2912/next-pwa')).default({
-    dest: 'public',
-    disable: !env.PWA,
-  });
-
   const withMDX = (await import('@next/mdx')).default();
 
-  return withBundleAnalyzer(withPWA(withMDX(nextConfig)));
+  return withBundleAnalyzer(withMDX(nextConfig));
 };
 
 export default nextConfigWithPlugins;

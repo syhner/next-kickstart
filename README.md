@@ -43,8 +43,7 @@ Some features depend on environment variables (indicated in features list with �
 
 ### Deployment
 
-- 📊 [**Bundle analyzer**](https://www.npmjs.com/package/@next/bundle-analyzer) - Analyze bundle sizes in each environment with `pnpm run build:analyze`
-- 📦💡 [**next-pwa**](https://www.npmjs.com/package/@ducanh2912/next-pwa) - Make your website as a progressive web app (PWA)
+- 📊 [**Bundle analyzer**](https://www.npmjs.com/package/@next/bundle-analyzer) - Analyze bundle sizes in each environment with `bun run build:analyze`
 - 🐳 [**Docker**](https://www.docker.com/) - (local and production) Docker-compose and Dockerfiles for running anywhere
 - 🔄 [**GitHub Actions**](https://github.com/features/actions) - Robust CI/CD
 
@@ -99,12 +98,6 @@ Some features depend on environment variables (indicated in features list with �
 ### [MDX](https://mdxjs.com/)
 
 - [`mdx-components.tsx`](mdx-components.tsx)
-
-### [next-pwa](https://www.npmjs.com/package/@ducanh2912/next-pwa)
-
-- [`public/icon-512x512.png`](public/icon-512x512.png)
-- [`public/manifest.json`](public/manifest.json)
-- [`next.config.mjs`](next.config.mjs)
 
 ### [NextAuth](https://next-auth.js.org/)
 
