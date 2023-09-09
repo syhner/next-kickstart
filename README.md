@@ -170,7 +170,6 @@ Some features depend on environment variables (indicated in features list with ð
 ### [Vitest](https://vitest.dev/)
 
 - [`testing/setup.ts`](testing/setup.ts)
-- [`types/vitest.d.ts`](types/vitest.d.ts)
 - [`vitest.config.ts`](vitest.config.ts)
 
 ### [VS Code](https://code.visualstudio.com/)
