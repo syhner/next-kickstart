@@ -7,7 +7,7 @@ RUN yarn global add pnpm
 # Install dependencies only when needed
 FROM base AS deps
 WORKDIR /app
-COPY package.json pnpm-lock.yaml* ./
+COPY package.json pnpm-lock.yaml ./
 RUN pnpm install
 
 # Development image, copy all the files and run next
