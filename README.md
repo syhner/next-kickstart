@@ -33,7 +33,6 @@ Some features depend on environment variables (indicated in features list with �
 - ✨ [**Prettier**](https://prettier.io/) - Consistent code styling
 - 🎨 [**Tailwind CSS**](https://tailwindcss.com/) - Utility-first CSS framework
 - 🧩 [**shadcn/ui**](https://ui.shadcn.com/) - Components built with Radix UI and Tailwind CSS
-- 📝 [**MDX**](https://mdxjs.com/) - Use markdown with components
 - 📁 [**Absolute imports**](https://nextjs.org/docs/app/building-your-application/configuring/absolute-imports-and-module-aliases) - Easier and cleaner module imports
 - 💻 [**VS Code configurations**](https://code.visualstudio.com/) - Configurations for easy debugging
 
@@ -94,10 +93,6 @@ Some features depend on environment variables (indicated in features list with �
 ### [GitHub Actions](https://github.com/features/actions)
 
 - [`.github/workflows/ci.yml`](.github/workflows/ci.yml) - type-checking and linting (hence these errors are ignored in [`next.config.mjs`](next.config.mjs))
-
-### [MDX](https://mdxjs.com/)
-
-- [`mdx-components.tsx`](mdx-components.tsx)
 
 ### [NextAuth](https://next-auth.js.org/)
 

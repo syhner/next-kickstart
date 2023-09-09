@@ -15,7 +15,6 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   experimental: {
-    mdxRs: true,
     /**
      * @enable NextAuth
      */
@@ -34,9 +33,7 @@ const nextConfigWithPlugins = async (phase, { defaultConfig }) => {
     enabled: env.ANALYZE,
   });
 
-  const withMDX = (await import('@next/mdx')).default();
-
-  return withBundleAnalyzer(withMDX(nextConfig));
+  return withBundleAnalyzer(nextConfig);
 };
 
 export default nextConfigWithPlugins;
