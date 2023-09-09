@@ -39,9 +39,6 @@ Some features depend on environment variables (indicated in features list with ğ
 
 ### Testing
 
-- ğŸ§ª [**Vitest**](https://vitest.dev/) - Flexible testing framework
-- ğŸ™ [**React Testing Library**](https://testing-library.com/docs/react-testing-library/intro/) - Maintainable component testing
-  - ğŸ”— integrates with Vitest as your testing framework
 - ğŸ­ [**Playwright**](https://playwright.dev/) - End-to-end testing against multiple environments
 
 ### Deployment
@@ -129,11 +126,6 @@ Some features depend on environment variables (indicated in features list with ğ
 - [`.prettierignore`](.prettierignore)
 - [`.prettierrc.json`](.prettierrc.json)
 
-### [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
-
-- [`src/app/page.test.tsx`](src/app/page.test.tsx)
-- [`testing/setup.ts`](testing/setup.ts)
-
 ### [shadcn/ui](https://ui.shadcn.com/)
 
 - [`src/components/providers/theme-provider.tsx`](src/components/providers/theme-provider.tsx)
@@ -166,12 +158,6 @@ Some features depend on environment variables (indicated in features list with ğ
 
 - [`tsconfig.json`](tsconfig.json) - all modifications from [create-next-app](https://www.npmjs.com/package/create-next-app) are explained with comments
 - [`types/reset.d.ts`](types/reset.d.ts) - using [ts-reset](https://github.com/total-typescript/ts-reset) to increase type-safety
-
-### [Vitest](https://vitest.dev/)
-
-- [`testing/setup.ts`](testing/setup.ts)
-- [`types/vitest.d.ts`](types/vitest.d.ts)
-- [`vitest.config.ts`](vitest.config.ts)
 
 ### [VS Code](https://code.visualstudio.com/)
 

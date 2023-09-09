@@ -1,6 +1,4 @@
-// @vitest-environment node
-
-import { expect, it, test } from 'vitest';
+import { expect, it, test } from 'bun:test';
 import { appRouter } from '.';
 import { createContext } from '../init';
 
