@@ -43,7 +43,6 @@ Some features depend on environment variables (indicated in features list with �
 ### Deployment
 
 - 📊 [**Bundle analyzer**](https://www.npmjs.com/package/@next/bundle-analyzer) - Analyze bundle sizes in each environment with `bun run build:analyze`
-- 🐳 [**Docker**](https://www.docker.com/) - (local and production) Docker-compose and Dockerfiles for running anywhere
 - 🔄 [**GitHub Actions**](https://github.com/features/actions) - Robust CI/CD
 
 ## 🌱 Getting started
@@ -65,18 +64,7 @@ Some features depend on environment variables (indicated in features list with �
   bun run dev
   ```
 
-- or with [Docker](https://docs.docker.com/get-docker/)
-
-  ```sh
-  docker-compose --file docker/dev/docker-compose.yml up
-  ```
-
 ## ⚙️ Configuration
-
-### [Docker](https://www.docker.com/)
-
-- [`.dockerignore`](.dockerignore)
-- [`docker/`](docker/) - Dockerfile and docker-compose.yml for development and production
 
 ### [Drizzle](https://orm.drizzle.team/)
 
