@@ -50,13 +50,6 @@ export const env = createEnv({
      */
     // PUSHER_APP_ID: z.string().min(1),
     // PUSHER_SECRET: z.string().min(1),
-
-    /**
-     * Set PWA environment variable to true to enable PWA
-     * (in env.local and/or deployment environment variables)
-     * @enable PWA
-     */
-    PWA: toggle.default('false'),
   },
   /**
    * Due to how Next.js bundles environment variables on Edge and Client,
@@ -98,7 +91,5 @@ export const env = createEnv({
      */
     // PUSHER_APP_ID: process.env.PUSHER_APP_ID,
     // PUSHER_SECRET: process.env.PUSHER_SECRET,
-
-    PWA: process.env.PWA,
   },
 });
