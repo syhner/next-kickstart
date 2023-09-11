@@ -14,6 +14,8 @@ Some features depend on environment variables (indicated in features list with �
 
 ## 📚 Features
 
+**View the [repository branches](https://github.com/syhner/next-kickstart/branches) for other feature sets** (e.g. Bun)
+
 ### Core
 
 - 🏗️ [**TypeScript**](https://www.typescriptlang.org/) - Configured to maximize type safety
