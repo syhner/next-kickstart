@@ -1,10 +1,10 @@
 {
   "recommendations": [
-    "ms-azuretools.vscode-docker",
-    "dbaeumer.vscode-eslint",
-    "unifiedjs.vscode-mdx",
-    "esbenp.prettier-vscode",
     "bradlc.vscode-tailwindcss",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "ms-azuretools.vscode-docker",
+    "unifiedjs.vscode-mdx",
     "zixuanchen.vitest-explorer"
   ]
 }
