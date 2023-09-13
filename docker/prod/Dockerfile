@@ -11,7 +11,7 @@ COPY package.json pnpm-lock.yaml ./
 RUN pnpm install
 
 # Rebuild the source code only when needed
-FROM base as builder
+FROM base AS builder
 WORKDIR /app
 # Copy files
 COPY --from=deps /app/node_modules ./node_modules

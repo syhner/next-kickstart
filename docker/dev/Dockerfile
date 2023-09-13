@@ -11,7 +11,7 @@ COPY package.json pnpm-lock.yaml ./
 RUN pnpm install
 
 # Development image, copy all the files and run next
-FROM base as runner
+FROM base AS runner
 WORKDIR /app
 # Copy files
 COPY --from=deps /app/node_modules/ ./node_modules/
