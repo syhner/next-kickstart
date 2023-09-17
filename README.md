@@ -61,7 +61,7 @@ Some features depend on environment variables (indicated in features list with ð
 
 ðŸ“‹ **Option 2: Clone and run locally**
 
-1. [Fork this repository](https://github.com/syhner/next-kickstart/fork)
+1. [Fork this repository](https://github.com/syhner/next-kickstart/fork) (uncheck 'Copy the `main` branch only` if you are interested in other branches / feature sets)
 2. Clone your new repository
 3. Install dependencies and run the development server
 
