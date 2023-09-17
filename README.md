@@ -57,9 +57,10 @@ Some features depend on environment variables (indicated in features list with ð
 2. Clone your new repository
 3. Install dependencies and run the development server
 
-- with [bun](https://bun.sh/docs/installation)
+- with [Bun](https://bun.sh/docs/installation)
 
   ```sh
+  git checkout bun
   bun install
   bun run dev
   ```
