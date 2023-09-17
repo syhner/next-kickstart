@@ -49,7 +49,7 @@ Some features depend on environment variables (indicated in features list with �
 
 🚀 **Option 1: Clone and deploy with Vercel**
 
-[![Vercel](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2FSyhner%2Fnext-kickstart)
+[![Vercel](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fsyhner%2Fnext-kickstart%2Ftree%2Fbun)
 
 📋 **Option 2: Clone and run locally**
 
