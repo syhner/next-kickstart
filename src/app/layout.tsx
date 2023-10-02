@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'next-kickstart',
   description:
-    'Minimal yet feature packed Next.js 13.4 (app router) boilerplate',
+    'Minimal yet feature packed Next.js 13.5 (app router) boilerplate',
   manifest: '/manifest.json',
   themeColor: '#000000',
 };
