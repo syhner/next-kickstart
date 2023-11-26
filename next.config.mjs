@@ -16,10 +16,6 @@ const nextConfig = {
   },
   experimental: {
     mdxRs: true,
-    /**
-     * @enable NextAuth
-     */
-    // serverActions: true,
   },
 };
 
