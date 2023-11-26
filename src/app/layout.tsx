@@ -1,6 +1,6 @@
 import '../styles/globals.css';
 
-import type { Metadata, ServerRuntime } from 'next';
+import type { Metadata, ServerRuntime, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from '~/components/providers/theme-provider';
 import { TrpcProvider } from '~/components/providers/trpc-provider';
@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   description:
     'Minimal yet feature packed Next.js 13.5 (app router) boilerplate',
   manifest: '/manifest.json',
+};
+
+export const viewport: Viewport = {
   themeColor: '#000000',
 };
 
