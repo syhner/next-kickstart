@@ -30,20 +30,20 @@ export const env = createEnv({
     ANALYZE: toggle.default('false'),
 
     /**
+     * @enable LuciaAuth
+     */
+    // AUTH_GITHUB_ID: z.string().min(1),
+    // AUTH_GITHUB_SECRET: z.string().min(1),
+
+    DATABASE_PREFIX: z.string().default(''),
+    /**
      * @enable Drizzle
      */
-    // DATABASE_URL: z.string().url(),
+    DATABASE_URL: z.string().url(),
 
     NODE_ENV: z
       .enum(['development', 'production', 'test'])
       .default('development'),
-
-    /**
-     * @enable NextAuth
-     */
-    // NEXTAUTH_GITHUB_ID: z.string().min(1),
-    // NEXTAUTH_GITHUB_SECRET: z.string().min(1),
-    // NEXTAUTH_SECRET: z.string().min(32),
 
     /**
      * @enable WebSockets
@@ -66,8 +66,11 @@ export const env = createEnv({
    */
   runtimeEnv: {
     /**
+     * ------
      * Client
+     * ------
      */
+
     /**
      * @enable WebSockets
      */
@@ -75,23 +78,25 @@ export const env = createEnv({
     // NEXT_PUBLIC_PUSHER_CLUSTER: process.env.NEXT_PUBLIC_PUSHER_CLUSTER,
 
     /**
+     * ------
      * Server
+     * ------
      */
     ANALYZE: process.env.ANALYZE,
 
     /**
+     * @enable LuciaAuth
+     */
+    // AUTH_GITHUB_ID: process.env.AUTH_GITHUB_ID,
+    // AUTH_GITHUB_SECRET: process.env.AUTH_GITHUB_SECRET,
+
+    DATABASE_PREFIX: process.env.DATABASE_PREFIX,
+    /**
      * @enable Drizzle
      */
-    // DATABASE_URL: process.env.DATABASE_URL,
+    DATABASE_URL: process.env.DATABASE_URL,
 
     NODE_ENV: process.env.NODE_ENV,
-
-    /**
-     * @enable NextAuth
-     */
-    // NEXTAUTH_GITHUB_ID: process.env.NEXTAUTH_GITHUB_ID,
-    // NEXTAUTH_GITHUB_SECRET: process.env.NEXTAUTH_GITHUB_SECRET,
-    // NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
 
     /**
      * @enable WebSockets

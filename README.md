@@ -22,11 +22,9 @@ Some features depend on environment variables (indicated in features list with �
 - ⚙️ [**T3 Env**](https://github.com/t3-oss/t3-env) - Environment variable validation
 - 🌐 [**tRPC**](https://trpc.io/) - Create end-to-end type-safe APIs that work in both client and server components
 - ⚡💡 [**WebSockets**](https://pusher.com) - Real-time communication (using Pusher, but can be swapped out for alternatives)
-  - ❗️ using [pusher-http-edge](https://www.npmjs.com/package/pusher-http-edge) to run on edge, use the [nodejs runtime](src/app/api/trpc/[trpc]/route.ts) with a [stable version](https://www.npmjs.com/package/pusher) if desired
   - 🔗 integrates with tRPC for end-to-end type-safe events
 - 💽💡 [**Drizzle**](https://orm.drizzle.team/) - ORM with maximal type safety
-- 🔒💡 [**NextAuth**](https://next-auth.js.org/) - Flexible and secure authentication
-  - ❗️ using [next-auth@experimental](https://www.npmjs.com/package/next-auth/v/0.0.0-manual.ffd05533) to run on edge. use the [nodejs runtime](src/app/api/auth/[...nextauth]/route.ts) with a [stable version](https://www.npmjs.com/package/next-auth) if desired
+- 🔒💡 [**Lucia Auth**](https://lucia-auth.com/) - Authentication, simple and clean
   - 🔗💡 integrates with Drizzle to store auth data
 
 ### Development
@@ -101,6 +99,21 @@ Some features depend on environment variables (indicated in features list with �
 
 - [`.github/workflows/ci.yml`](.github/workflows/ci.yml) - type-checking and linting (hence these errors are ignored in [`next.config.mjs`](next.config.mjs))
 
+### [Lucia Auth](https://lucia-auth.com/)
+
+💡 (requires enabling)
+
+- [`src/app/api/auth`](src/app/api/auth)
+- [`src/app/auth`](src/app/auth)
+- [`src/components/auth.tsx`](src/components/auth.tsx)
+- [`src/db/schemas/auth.ts)`](src/db/schemas/auth.ts) store auth data in database
+- [`src/lib/auth.ts`](src/lib/auth.ts)
+- [`types/lucia.d.ts`](types/lucia.d.ts)
+
+#### Examples
+
+- [`src/app/examples/profile/page.tsx`](src/app/examples/profile/page.tsx)
+
 ### [MDX](https://mdxjs.com/)
 
 - [`mdx-components.tsx`](mdx-components.tsx)
@@ -110,15 +123,6 @@ Some features depend on environment variables (indicated in features list with �
 - [`public/icon-512x512.png`](public/icon-512x512.png)
 - [`public/manifest.json`](public/manifest.json)
 - [`next.config.mjs`](next.config.mjs)
-
-### [NextAuth](https://next-auth.js.org/)
-
-💡 (requires enabling)
-
-- [`src/app/api/auth/[...nextauth]/route.ts`](src/app/api/auth/[...nextauth]/route.ts)
-- [`src/components/auth.tsx`](src/components/auth.tsx)
-- [`src/db/schemas/auth.ts`](src/db/schemas/auth.ts) — store auth data (users, accounts, sessions, verification tokens) in database
-- [`src/lib/auth.ts`](src/lib/auth.ts)
 
 ### [Playwright](https://playwright.dev/)
 

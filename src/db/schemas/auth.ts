@@ -1,57 +1,39 @@
-import type { AdapterAccount } from '@auth/core/adapters';
-import { relations, sql } from 'drizzle-orm';
-import {
-  int,
-  mysqlTable,
-  primaryKey,
-  timestamp,
-  varchar,
-} from 'drizzle-orm/mysql-core';
+import { relations } from 'drizzle-orm';
+import { bigint, mysqlTableCreator, varchar } from 'drizzle-orm/mysql-core';
+import { env } from '../../env.mjs';
 
-export const users = mysqlTable('users', {
-  id: varchar('id', { length: 255 }).notNull().primaryKey(),
-  name: varchar('name', { length: 255 }),
-  email: varchar('email', { length: 255 }),
-  emailVerified: timestamp('emailVerified', {
-    mode: 'date',
-    fsp: 3,
-  }).default(sql`CURRENT_TIMESTAMP(3)`),
-  image: varchar('image', { length: 255 }),
+const mysqlTable = mysqlTableCreator((name) => `${env.DATABASE_PREFIX}${name}`);
+
+export const tableNames = {
+  users: 'users',
+  keys: 'keys',
+  sessions: 'sessions',
+} as const;
+
+export const users = mysqlTable(tableNames.users, {
+  id: varchar('id', { length: 15 }).primaryKey(), // change length when using custom user ids
+  githubUsername: varchar('github_username', { length: 39 }),
+  // other user attributes
 });
 
-export const accounts = mysqlTable(
-  'accounts',
-  {
-    userId: varchar('userId', { length: 255 }).notNull(),
-    type: varchar('type', { length: 255 })
-      .$type<AdapterAccount['type']>()
-      .notNull(),
-    provider: varchar('provider', { length: 255 }).notNull(),
-    providerAccountId: varchar('providerAccountId', { length: 255 }).notNull(),
-    refresh_token: varchar('refresh_token', { length: 255 }),
-    access_token: varchar('access_token', { length: 255 }),
-    expires_at: int('expires_at'),
-    token_type: varchar('token_type', { length: 255 }),
-    scope: varchar('scope', { length: 255 }),
-    id_token: varchar('id_token', { length: 255 }),
-    session_state: varchar('session_state', { length: 255 }),
-  },
-  (account) => ({
-    compoundKey: primaryKey(account.provider, account.providerAccountId),
-  })
-);
+export const keys = mysqlTable(tableNames.keys, {
+  id: varchar('id', { length: 255 }).primaryKey(),
+  userId: varchar('user_id', { length: 15 }).notNull(),
+  hashedPassword: varchar('hashed_password', { length: 255 }),
+});
 
-export const accountsRelations = relations(accounts, ({ one }) => ({
+export const keysRelations = relations(keys, ({ one }) => ({
   user: one(users, {
-    fields: [accounts.userId],
+    fields: [keys.userId],
     references: [users.id],
   }),
 }));
 
-export const sessions = mysqlTable('sessions', {
-  sessionToken: varchar('sessionToken', { length: 255 }).notNull().primaryKey(),
-  userId: varchar('userId', { length: 255 }).notNull(),
-  expires: timestamp('expires', { mode: 'date' }).notNull(),
+export const sessions = mysqlTable(tableNames.sessions, {
+  id: varchar('id', { length: 128 }).primaryKey(),
+  userId: varchar('user_id', { length: 15 }).notNull(),
+  activeExpires: bigint('active_expires', { mode: 'number' }).notNull(),
+  idleExpires: bigint('idle_expires', { mode: 'number' }).notNull(),
 });
 
 export const sessionsRelations = relations(sessions, ({ one }) => ({
@@ -61,14 +43,17 @@ export const sessionsRelations = relations(sessions, ({ one }) => ({
   }),
 }));
 
-export const verificationTokens = mysqlTable(
-  'verificationTokens',
+type UserColumns = typeof users._.columns;
+
+export type UserAttributes = Omit<
   {
-    identifier: varchar('identifier', { length: 255 }).notNull(),
-    token: varchar('token', { length: 255 }).notNull(),
-    expires: timestamp('expires', { mode: 'date' }).notNull(),
+    [K in keyof UserColumns as UserColumns[K]['_']['notNull'] extends true
+      ? UserColumns[K]['_']['name']
+      : never]: UserColumns[K]['_']['data'];
+  } & {
+    [K in keyof UserColumns as UserColumns[K]['_']['notNull'] extends true
+      ? never
+      : UserColumns[K]['_']['name']]?: UserColumns[K]['_']['data'];
   },
-  (vt) => ({
-    compoundKey: primaryKey(vt.identifier, vt.token),
-  })
-);
+  'id'
+>;

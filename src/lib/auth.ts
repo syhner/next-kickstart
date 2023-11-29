@@ -1,31 +1,51 @@
 /**
  * @enable Drizzle
  */
-// import { DrizzleAdapter } from '@auth/drizzle-adapter';
-// import { db } from './db';
+
+import { planetscale } from '@lucia-auth/adapter-mysql';
+import { github } from '@lucia-auth/oauth/providers';
+import { lucia } from 'lucia';
+import { nextjs_future } from 'lucia/middleware';
+import { tableNames } from '~/db/schemas/auth';
+import { env } from '~/env.mjs';
+import { connection } from './db';
+
+export const auth = lucia({
+  env: env.NODE_ENV === 'production' ? 'PROD' : 'DEV',
+  middleware: nextjs_future(),
+  sessionCookie: { expires: false },
+
+  adapter: planetscale(connection, {
+    user: `${env.DATABASE_PREFIX}${tableNames.users}`,
+    key: `${env.DATABASE_PREFIX}${tableNames.keys}`,
+    session: `${env.DATABASE_PREFIX}${tableNames.sessions}`,
+  }),
+
+  getUserAttributes: (data) => {
+    // id is not needed since user attributes will have userId
+    return data as Omit<typeof data, 'id'>;
+  },
+});
+
+export type Auth = typeof auth;
 
 /**
- * @enable NextAuth
+ * @enable LuciaAuth
  */
-// import NextAuth from 'next-auth';
-// import GithubProvider from 'next-auth/providers/github';
-// import { env } from '~/env.mjs';
-//
-// export const {
-//   handlers: { GET, POST },
-//   auth,
-// } = NextAuth({
-//
-//   /**
-//    * @enable Drizzle
-//    * @optional Store auth data in database
-//    */
-//   // adapter: DrizzleAdapter(db),
-//
-//   providers: [
-//     GithubProvider({
-//       clientId: env.NEXTAUTH_GITHUB_ID,
-//       clientSecret: env.NEXTAUTH_GITHUB_SECRET,
-//     }),
-//   ],
+// export const githubAuth = github(auth, {
+//   clientId: env.AUTH_GITHUB_ID,
+//   clientSecret: env.AUTH_GITHUB_SECRET,
 // });
+
+const authProviders = [
+  /**
+   * @enable LuciaAuth
+   */
+  // 'github',
+] as const;
+export type AuthProvider = (typeof authProviders)[number];
+
+export const authRedirects = {
+  afterLogin: '/examples/profile',
+  afterLogout: '/auth/login',
+} as const;

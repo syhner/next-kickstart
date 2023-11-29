@@ -15,6 +15,10 @@ export const appRouter = router({
     channel: 'websockets',
     event: 'message',
   }),
+
+  profile: authenticatedProcedure.query((opts) => ({
+    github_username: opts.ctx.session.user.github_username,
+  })),
 });
 
 export type AppRouter = typeof appRouter;
