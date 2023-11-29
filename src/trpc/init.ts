@@ -1,7 +1,9 @@
+import * as context from 'next/headers';
 import { initTRPC } from '@trpc/server';
 import type { inferAsyncReturnType } from '@trpc/server';
 import type { FetchCreateContextFnOptions } from '@trpc/server/adapters/fetch';
 import { env } from '~/env.mjs';
+import { auth } from '~/lib/auth';
 import { transformer } from './transformer';
 
 /**
@@ -10,17 +12,18 @@ import { transformer } from './transformer';
 // import Pusher from 'pusher-http-edge';
 
 /**
- * @enable NextAuth
+ * @enable LuciaAuth
  */
 // import { auth } from '~/lib/auth';
 
 export async function createContext(opts?: FetchCreateContextFnOptions) {
   /**
    * Remove the other `session` declaration after enabling
-   * @enable NextAuth
+   * @enable LuciaAuth
    */
-  // const session = await auth();
-  const session = { user: null };
+  const authRequest = auth.handleRequest('GET', context);
+  const session = await authRequest.validate();
+  // const session = { user: null };
 
   /**
    * Remove the other `eventServer` declaration after enabling
