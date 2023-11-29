@@ -39,7 +39,7 @@ export const env = createEnv({
     /**
      * @enable Drizzle
      */
-    DATABASE_URL: z.string().url(),
+    // DATABASE_URL: z.string().url(),
 
     NODE_ENV: z
       .enum(['development', 'production', 'test'])
@@ -94,7 +94,7 @@ export const env = createEnv({
     /**
      * @enable Drizzle
      */
-    DATABASE_URL: process.env.DATABASE_URL,
+    // DATABASE_URL: process.env.DATABASE_URL,
 
     NODE_ENV: process.env.NODE_ENV,
 

@@ -1,11 +1,12 @@
 import * as context from 'next/headers';
 import { redirect } from 'next/navigation';
 import { Login } from '~/components/auth';
-import { auth, authRedirects } from '~/lib/auth';
 
 /**
  * @enable LuciaAuth
  */
+// import { auth, authRedirects } from '~/lib/auth';
+//
 // export default async function Page() {
 //   const authRequest = auth.handleRequest('GET', context);
 //   const session = await authRequest.validate();

@@ -17,7 +17,10 @@ export const appRouter = router({
   }),
 
   profile: authenticatedProcedure.query((opts) => ({
-    github_username: opts.ctx.session.user.github_username,
+    /**
+     * @enable LuciaAuth
+     */
+    // github_username: opts.ctx.session.user.github_username,
   })),
 });
 

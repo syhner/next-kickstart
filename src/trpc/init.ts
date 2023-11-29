@@ -3,7 +3,6 @@ import { initTRPC } from '@trpc/server';
 import type { inferAsyncReturnType } from '@trpc/server';
 import type { FetchCreateContextFnOptions } from '@trpc/server/adapters/fetch';
 import { env } from '~/env.mjs';
-import { auth } from '~/lib/auth';
 import { transformer } from './transformer';
 
 /**
@@ -21,9 +20,9 @@ export async function createContext(opts?: FetchCreateContextFnOptions) {
    * Remove the other `session` declaration after enabling
    * @enable LuciaAuth
    */
-  const authRequest = auth.handleRequest('GET', context);
-  const session = await authRequest.validate();
-  // const session = { user: null };
+  // const authRequest = auth.handleRequest('GET', context);
+  // const session = await authRequest.validate();
+  const session = { user: null };
 
   /**
    * Remove the other `eventServer` declaration after enabling
