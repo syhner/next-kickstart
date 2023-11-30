@@ -2,15 +2,7 @@
 
 Feature packed Next.js 14.0 (app router) boilerplate. Zero setup. Edge ready.
 
-Some features depend on environment variables (indicated in features list with 💡) and so require enabling. They are disabled by default so that the app runs without any setup. They can be enabled by uncommenting all lines under where `@enable {feature}` appears. Some of these may be optional, indicated with `@optional {purpose}` e.g.
-
-```ts
-/**
- * @enable Drizzle
- * @optional Store auth data in database
- */
-// adapter: DrizzleAdapter(db)
-```
+Some features depend on environment variables (indicated in features list with 💡) and so require enabling. They are disabled by default so that the app runs without any setup. They can be enabled by uncommenting all lines under where `@enable {feature}` appears.
 
 ## 📚 Features
 
@@ -24,7 +16,7 @@ Some features depend on environment variables (indicated in features list with �
 - ⚡💡 [**WebSockets**](https://pusher.com) - Real-time communication (using Pusher, but can be swapped out for alternatives)
   - 🔗 integrates with tRPC for end-to-end type-safe events
 - 💽💡 [**Drizzle**](https://orm.drizzle.team/) - ORM with maximal type safety
-- 🔒💡 [**Lucia Auth**](https://lucia-auth.com/) - Authentication, simple and clean
+- 🔒💡 [**Lucia Auth**](https://lucia-auth.com/) - Flexible and secure authentication
   - 🔗💡 integrates with Drizzle to store auth data
 
 ### Development
