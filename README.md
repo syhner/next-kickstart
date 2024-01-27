@@ -1,6 +1,6 @@
 ## next-kickstart
 
-Feature packed Next.js 14.0 (app router) boilerplate. Zero setup. Edge ready.
+Feature packed Next.js boilerplate. Zero setup. Edge ready.
 
 Some features depend on environment variables (indicated in features list with 💡) and so require enabling. They are disabled by default so that the app runs without any setup. They can be enabled by uncommenting all lines under where `@enable {feature}` appears.
 
