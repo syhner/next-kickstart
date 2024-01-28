@@ -50,7 +50,6 @@
     "lucide-react": "^0.261.0",
     "next": "14.0.3",
     "next-themes": "^0.2.1",
-    "oslo": "^1.0.2",
     "pusher-http-edge": "^0.4.0",
     "pusher-js": "^8.3.0",
     "react": "^18",
