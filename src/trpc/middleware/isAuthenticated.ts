@@ -2,7 +2,7 @@ import { TRPCError } from '@trpc/server';
 import { t } from '../init';
 
 export const isAuthenticated = t.middleware(({ ctx, next }) => {
-  if (!ctx.session?.user) {
+  if (!ctx.user) {
     throw new TRPCError({ code: 'UNAUTHORIZED' });
   }
 

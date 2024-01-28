@@ -20,7 +20,7 @@ export const appRouter = router({
     /**
      * @enable LuciaAuth
      */
-    // github_username: opts.ctx.session.user.github_username,
+    // githubId: opts.ctx.user?.githubId,
   })),
 });
 

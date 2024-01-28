@@ -1,19 +1,24 @@
 /**
  * @enable LuciaAuth
  */
-// import * as context from 'next/headers';
-// import { redirect } from 'next/navigation';
-// import { Logout } from '~/components/auth';
-// import { auth } from '~/lib/auth';
+// import { Login, Logout } from '~/components/auth';
+// import { validateRequest } from '~/lib/auth';
 //
 // export default async function Page() {
-//   const authRequest = auth.handleRequest('GET', context);
-//   const session = await authRequest.validate();
-//   if (!session) redirect('/auth/login');
+//   const { user } = await validateRequest();
+//
+//   if (!user) {
+//     return (
+//       <>
+//         <p>Log in to show user info</p>
+//         <Login provider='github' />
+//       </>
+//     );
+//   }
 //
 //   return (
 //     <>
-//       <p>GitHub username: {session.user.github_username}</p>
+//       <p>GitHub id: {user.githubId}</p>
 //       <Logout />
 //     </>
 //   );
