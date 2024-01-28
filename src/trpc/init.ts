@@ -1,4 +1,3 @@
-import * as context from 'next/headers';
 import { initTRPC } from '@trpc/server';
 import type { inferAsyncReturnType } from '@trpc/server';
 import type { FetchCreateContextFnOptions } from '@trpc/server/adapters/fetch';
@@ -13,16 +12,16 @@ import { transformer } from './transformer';
 /**
  * @enable LuciaAuth
  */
-// import { auth } from '~/lib/auth';
+// import { validateRequest } from '~/lib/auth';
 
 export async function createContext(opts?: FetchCreateContextFnOptions) {
   /**
-   * Remove the other `session` declaration after enabling
+   * Remove the other `session` and `user` declaration after enabling
    * @enable LuciaAuth
    */
-  // const authRequest = auth.handleRequest('GET', context);
-  // const session = await authRequest.validate();
-  const session = { user: null };
+  // const { session, user } = await validateRequest();
+  const session = null,
+    user = null;
 
   /**
    * Remove the other `eventServer` declaration after enabling
@@ -37,7 +36,7 @@ export async function createContext(opts?: FetchCreateContextFnOptions) {
   // });
   const eventServer = { trigger: async (...args: unknown[]) => {} };
 
-  return { eventServer, session };
+  return { eventServer, session, user };
 }
 
 export type Context = inferAsyncReturnType<typeof createContext>;

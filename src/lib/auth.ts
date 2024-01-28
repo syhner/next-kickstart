@@ -1,51 +1,89 @@
-import { planetscale } from '@lucia-auth/adapter-mysql';
-import { github } from '@lucia-auth/oauth/providers';
-import { lucia } from 'lucia';
-import { nextjs_future } from 'lucia/middleware';
-import { tableNames } from '~/db/schemas/auth';
+import { cache } from 'react';
+import { cookies } from 'next/headers';
+import { DrizzleMySQLAdapter } from '@lucia-auth/adapter-drizzle';
+import { GitHub } from 'arctic';
+import { Lucia } from 'lucia';
+import type { Session, User } from 'lucia';
+import { sessions, users } from '~/db/schemas/auth';
 import { env } from '~/env.mjs';
 
 /**
  * @enable Drizzle
  */
-// import { connection } from './db';
+// import { db } from './db';
 
 /**
  * @enable LuciaAuth
  */
-// export const auth = lucia({
-//   env: env.NODE_ENV === 'production' ? 'PROD' : 'DEV',
-//   middleware: nextjs_future(),
-//   sessionCookie: { expires: false },
+// const adapter = new DrizzleMySQLAdapter(db, sessions, users);
 //
-//   adapter: planetscale(connection, {
-//     user: `${env.DATABASE_PREFIX}${tableNames.users}`,
-//     key: `${env.DATABASE_PREFIX}${tableNames.keys}`,
-//     session: `${env.DATABASE_PREFIX}${tableNames.sessions}`,
-//   }),
-//
-//   getUserAttributes: (data) => {
-//     // id is not needed since user attributes will have userId
-//     return data as Omit<typeof data, 'id'>;
+// export const lucia = new Lucia(adapter, {
+//   sessionCookie: {
+//     // This sets cookies with super long expiration since Next.js doesn't
+//     // allow Lucia to extend cookie expiration when rendering pages
+//     expires: false,
+//     attributes: {
+//       secure: env.NODE_ENV === 'production', // `true` when using HTTPS
+//     },
+//   },
+//   getUserAttributes: (attributes) => {
+//     return {
+//       githubId: attributes.githubId,
+//     };
 //   },
 // });
 //
-// export type Auth = typeof auth;
+// export const validateRequest = cache(
+//   async (): Promise<
+//     { user: User; session: Session } | { user: null; session: null }
+//   > => {
+//     const sessionId = cookies().get(lucia.sessionCookieName)?.value ?? null;
+//     if (!sessionId) {
+//       return { user: null, session: null };
+//     }
 //
-// export const githubAuth = github(auth, {
-//   clientId: env.AUTH_GITHUB_ID,
-//   clientSecret: env.AUTH_GITHUB_SECRET,
-// });
+//     const result = await lucia.validateSession(sessionId);
+//     // Next.js throws when you attempt to set cookie when rendering page
+//     try {
+//       if (result.session && result.session.fresh) {
+//         const sessionCookie = lucia.createSessionCookie(result.session.id);
+//         cookies().set(
+//           sessionCookie.name,
+//           sessionCookie.value,
+//           sessionCookie.attributes
+//         );
+//       }
+//       if (!result.session) {
+//         const sessionCookie = lucia.createBlankSessionCookie();
+//         cookies().set(
+//           sessionCookie.name,
+//           sessionCookie.value,
+//           sessionCookie.attributes
+//         );
+//       }
+//     } catch {}
+//     return result;
+//   }
+// );
+//
+// export const github = new GitHub(env.AUTH_GITHUB_ID, env.AUTH_GITHUB_SECRET);
+//
+// declare module 'lucia' {
+//   interface Register {
+//     Lucia: typeof lucia;
+//     DatabaseUserAttributes: Omit<typeof users._.model.select, 'id'>;
+//   }
+// }
 
 const authProviders = [
   /**
    * @enable LuciaAuth
    */
-  // 'github',
+  'github',
 ] as const;
 export type AuthProvider = (typeof authProviders)[number];
 
 export const authRedirects = {
   afterLogin: '/examples/profile',
-  afterLogout: '/auth/login',
+  afterLogout: '/examples/profile',
 } as const;
