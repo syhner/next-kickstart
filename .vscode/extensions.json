@@ -5,6 +5,6 @@
     "esbenp.prettier-vscode",
     "ms-azuretools.vscode-docker",
     "unifiedjs.vscode-mdx",
-    "zixuanchen.vitest-explorer"
+    "vitest.explorer"
   ]
 }
